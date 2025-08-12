@@ -14,7 +14,7 @@ export default function HeroSection() {
           Available for new opportunities
         </Badge>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter">
-          Caleb Senyah
+          Caleb Makafui Senyah
         </h1>
         <p className="max-w-2xl text-lg sm:text-xl text-muted-foreground">
           A passionate and creative Software Engineer and Full-Stack Developer dedicated to building beautiful, functional, and user-centric applications.
