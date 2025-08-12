@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Code, Menu, X } from 'lucide-react';
+import { BrainCircuit, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
@@ -35,8 +35,8 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2 text-xl font-bold">
-            <Code className="w-6 h-6 text-primary" />
-            Caleb Senyah
+            <BrainCircuit className="w-6 h-6 text-primary" />
+            Caleb
           </a>
           
           <nav className="hidden md:flex items-center space-x-6">
