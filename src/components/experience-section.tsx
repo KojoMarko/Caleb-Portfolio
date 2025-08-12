@@ -1,28 +1,48 @@
 import SectionHeading from './section-heading';
 import { Briefcase } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from './ui/card';
 
 const experiences = [
   {
-    role: 'Full-Stack Engineer',
-    company: 'Tech Innovations Inc.',
-    period: 'Jan 2021 - Present',
-    description: [
-      'Developed and maintained web applications using React, Node.js, and TypeScript.',
-      'Collaborated with cross-functional teams to define, design, and ship new features.',
-      'Improved application performance by 30% through code optimization and database query tuning.',
-      'Implemented CI/CD pipelines, reducing deployment time by 50%.',
-    ],
+    company: 'Yale University',
+    role: 'Postgraduate Research Associate',
+    period: 'Nov 2023 - Present',
+    description: 'Advisor: AZA Allsop, MD, PhD',
   },
   {
-    role: 'Software Developer Intern',
-    company: 'CodeBase Solutions',
-    period: 'May 2020 - Aug 2020',
-    description: [
-      'Assisted in the development of a customer relationship management (CRM) system.',
-      'Wrote unit and integration tests to ensure code quality and reliability.',
-      'Participated in agile development cycles and daily stand-up meetings.',
-    ],
+    company: 'MinoHealth AI Labs',
+    role: 'Junior Machine Learning Engineer',
+    period: 'Oct 2022 - Oct 2023',
+    description: '',
+  },
+  {
+    company: 'KaraAgro AI',
+    role: 'Junior Machine Learning Engineer',
+    period: 'Oct 2022 - Oct 2023',
+    description: '',
+  },
+  {
+    company: 'ReachSci Mini Ph.D. Programme',
+    role: 'Participant',
+    period: 'Dec 2022 - Mar 2023',
+    description: 'Advisor: Prof Elsie E Kaufmann',
+  },
+  {
+    company: 'University of Ghana',
+    role: 'Research Intern',
+    period: 'Dec 2022 - Mar 2023',
+    description: 'Advisor: Prof Samuel K Kwofie',
+  },
+  {
+    company: 'ISCN Imbizo',
+    role: 'Summer School Student',
+    period: 'Apr 2022 - May 2022',
+    description: 'Computational Neuroscience and Machine Learning',
+  },
+  {
+    company: 'University of Ghana',
+    role: 'B.Sc. Student, Biomedical Engineering',
+    period: '2018 - 2022',
+    description: '',
   },
 ];
 
@@ -32,31 +52,34 @@ export default function ExperienceSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading 
           icon={Briefcase} 
-          title="Work Experience" 
-          description="My professional journey and key contributions."
+          title="My Journey" 
+          description="A timeline of my professional and academic experiences."
         />
-        <div className="mt-12 relative">
-           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-border -translate-x-1/2 hidden md:block" aria-hidden="true"></div>
+        <div className="mt-16 relative">
+          {/* Vertical line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border -translate-x-1/2" aria-hidden="true"></div>
+
           {experiences.map((exp, index) => (
-            <div key={index} className="md:grid md:grid-cols-2 md:gap-8 mb-12 group">
-              <div className={`flex md:justify-end items-start ${index % 2 === 0 ? 'md:text-right' : 'md:order-2 md:text-left'}`}>
-                <div className="w-full md:w-10/12">
-                   <p className="text-lg font-semibold text-primary">{exp.role}</p>
-                   <p className="text-muted-foreground">{exp.company}</p>
-                   <p className="text-sm text-muted-foreground">{exp.period}</p>
+            <div key={index} className="relative mb-12">
+              <div className="flex items-center">
+                {/* Content Left */}
+                <div className={`w-1/2 pr-8 text-right ${index % 2 !== 0 ? 'invisible' : ''}`}>
+                  <p className="text-sm text-muted-foreground">{exp.period}</p>
+                  <h3 className="text-xl font-bold text-primary">{exp.company}</h3>
+                  <p className="font-semibold">{exp.role}</p>
+                  {exp.description && <p className="text-muted-foreground mt-1">{exp.description}</p>}
                 </div>
-              </div>
-              <div className={`relative ${index % 2 === 0 ? '' : 'md:order-1'}`}>
-                 <div className="absolute left-1/2 top-5 -translate-x-1/2 h-4 w-4 rounded-full bg-primary border-4 border-secondary hidden md:block" aria-hidden="true"></div>
-                 <Card className="w-full md:w-10/12 md:ml-auto transition-all duration-300 group-hover:shadow-xl group-hover:border-primary/50 ${index % 2 === 1 ? 'md:mr-auto md:ml-0' : ''}">
-                    <CardContent className="pt-6">
-                        <ul className="space-y-2 text-muted-foreground list-disc pl-4">
-                            {exp.description.map((desc, i) => (
-                                <li key={i}>{desc}</li>
-                            ))}
-                        </ul>
-                    </CardContent>
-                </Card>
+
+                {/* Dot */}
+                <div className="w-4 h-4 rounded-full bg-primary border-4 border-secondary absolute left-1/2 -translate-x-1/2 z-10"></div>
+
+                {/* Content Right */}
+                <div className={`w-1/2 pl-8 text-left ${index % 2 === 0 ? 'invisible' : ''}`}>
+                  <p className="text-sm text-muted-foreground">{exp.period}</p>
+                  <h3 className="text-xl font-bold text-primary">{exp.company}</h3>
+                  <p className="font-semibold">{exp.role}</p>
+                  {exp.description && <p className="text-muted-foreground mt-1">{exp.description}</p>}
+                </div>
               </div>
             </div>
           ))}
