@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { HeartPulse, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
@@ -12,6 +12,39 @@ const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ];
+
+const CustomLogo = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    width="28"
+    height="28"
+    className="text-primary"
+  >
+    {/* Cloud */}
+    <path
+      d="M49.4,24.3C48.2,15.9,41,9,32,9c-7.3,0-13.5,4.7-16,11.2C7.3,21.1,2,26.2,2,33c0,7.2,5.8,13,13,13h30c6.1,0,11-4.9,11-11 C56,29.3,53.3,25.7,49.4,24.3z"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit="10"
+    />
+    {/* Circuit Cross */}
+    <g stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+      <line x1="32" y1="26" x2="32" y2="42" />
+      <line x1="24" y1="34" x2="40" y2="34" />
+       {/* Nodes */}
+      <circle cx="32" cy="26" r="2" fill="currentColor"/>
+      <circle cx="32" cy="42" r="2" fill="currentColor"/>
+      <circle cx="24" cy="34" r="2" fill="currentColor"/>
+      <circle cx="40" cy="34" r="2" fill="currentColor"/>
+      <circle cx="32" cy="34" r="2" fill="currentColor"/>
+    </g>
+  </svg>
+);
+
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -35,7 +68,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center gap-2 text-xl font-bold">
-            <HeartPulse className="w-6 h-6 text-primary" />
+            <CustomLogo />
             Caleb
           </a>
           
