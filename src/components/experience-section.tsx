@@ -5,7 +5,7 @@ const experiences = [
   {
     company: 'Mother of God Hospital & Alos Paraklet Healthcare Ltd',
     role: 'Field Service Biomedical Engineer',
-    period: '2024',
+    period: '2025',
     description: 'Focused on the installation, servicing, and maintenance of critical medical devices like ECG machines, chemistry analyzers, ventilators, and oxygen concentrators.',
   },
   {
