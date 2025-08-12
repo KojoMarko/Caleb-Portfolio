@@ -3,10 +3,16 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    company: 'Mother of God Hospital & Alos Paraklet Healthcare Ltd',
+    company: 'Alos Paraklet Healthcare Ltd',
     role: 'Field Service Biomedical Engineer',
     period: '2025',
     description: 'Focused on the installation, servicing, and maintenance of critical medical devices like ECG machines, chemistry analyzers, ventilators, and oxygen concentrators.',
+  },
+  {
+    company: 'Mother of God Hospital',
+    role: 'Field Service Biomedical Engineer',
+    period: '2024',
+    description: 'Ensured reliable performance of critical medical devices including ECG machines and chemistry analyzers in patient care environments.',
   },
   {
     company: 'Azubi Africa',
