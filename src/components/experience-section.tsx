@@ -3,46 +3,28 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    company: 'Yale University',
-    role: 'Postgraduate Research Associate',
-    period: 'Nov 2023 - Present',
-    description: 'Advisor: AZA Allsop, MD, PhD',
+    company: 'Mother of God Hospital & Alos Paraklet Healthcare Ltd',
+    role: 'Field Service Biomedical Engineer',
+    period: '2024',
+    description: 'Focused on the installation, servicing, and maintenance of critical medical devices like ECG machines, chemistry analyzers, ventilators, and oxygen concentrators.',
   },
   {
-    company: 'MinoHealth AI Labs',
-    role: 'Junior Machine Learning Engineer',
-    period: 'Oct 2022 - Oct 2023',
-    description: '',
+    company: 'Azubi Africa',
+    role: 'Frontend & AWS Cloud Engineer (Talent Mobility Program)',
+    period: '2023',
+    description: 'Developed and deployed scalable web applications such as Azushop, Gclient, and ThermoTrack using React, Next.js, and AWS services.',
   },
   {
-    company: 'KaraAgro AI',
-    role: 'Junior Machine Learning Engineer',
-    period: 'Oct 2022 - Oct 2023',
-    description: '',
-  },
-  {
-    company: 'ReachSci Mini Ph.D. Programme',
-    role: 'Participant',
-    period: 'Dec 2022 - Mar 2023',
-    description: 'Advisor: Prof Elsie E Kaufmann',
+    company: 'Ghana Ports and Harbours Authority',
+    role: 'Biomedical Service Engineer',
+    period: '2022-2023',
+    description: 'Managed and maintained telecommunications and broadcasting equipment in an industrial setting, sharpening technical precision and problem-solving skills.',
   },
   {
     company: 'University of Ghana',
-    role: 'Research Intern',
-    period: 'Dec 2022 - Mar 2023',
-    description: 'Advisor: Prof Samuel K Kwofie',
-  },
-  {
-    company: 'ISCN Imbizo',
-    role: 'Summer School Student',
-    period: 'Apr 2022 - May 2022',
-    description: 'Computational Neuroscience and Machine Learning',
-  },
-  {
-    company: 'University of Ghana',
-    role: 'B.Sc. Student, Biomedical Engineering',
-    period: '2018 - 2022',
-    description: '',
+    role: 'B.Sc. Biomedical Engineering',
+    period: 'Graduated 2022',
+    description: 'Presented a project on using machine learning to predict aromatase inhibitor suitability for breast cancer patients at a biennial science conference.',
   },
 ];
 
