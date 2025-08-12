@@ -25,10 +25,13 @@ export default function AboutSection() {
             />
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                Hello! I'm Caleb, a full-stack developer with a passion for turning complex problems into elegant, user-friendly software solutions. With a solid foundation in computer science and years of hands-on experience, I enjoy working across the entire stack, from crafting responsive front-end interfaces with React to architecting robust back-end systems with Node.js and Python.
+                I am Caleb Makafui Senyah, a multidisciplinary professional with expertise in frontend development, AWS cloud solutions, and field service biomedical engineering. My career bridges technology and healthcare, allowing me to design, build, and maintain solutions that enhance both digital platforms and critical medical systems.
               </p>
               <p>
-                I'm a lifelong learner, always excited to explore new technologies and frameworks. My goal is to not only write clean and efficient code but also to build products that make a real difference. When I'm not coding, you can find me exploring new hiking trails or contributing to open-source projects.
+                With experience spanning React, Next.js, Tailwind CSS, and AWS cloud architecture, I bring a strong focus on scalability, security, and user-centered design. In the biomedical field, I have worked extensively on the supply, installation, and maintenance of advanced medical devices, combining technical precision with hands-on problem-solving.
+              </p>
+              <p>
+                Driven by curiosity and innovation, I am passionate about IoT, AI/ML applications, and automation in healthcare and engineering. Whether building web applications or engineering medical solutions, my goal is to deliver impactful, reliable, and efficient systems that solve real-world problems.
               </p>
             </div>
           </div>
