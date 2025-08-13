@@ -63,7 +63,7 @@ export default function Home() {
         </nav>
 
         <div className="flex items-center space-x-4 mt-6">
-            <a href="https://github.com/calebsenyah" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/KojoMarko" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <Github className="h-6 w-6" />
                 </Button>
