@@ -45,7 +45,7 @@ export default function Home() {
               key={link.href} 
               href={link.href} 
               className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-base font-medium transition-colors hover:text-primary",
                   pathname === link.href ? "text-primary border-b-2 border-primary" : "text-muted-foreground"
               )}
             >
