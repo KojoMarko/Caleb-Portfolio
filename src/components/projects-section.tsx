@@ -2,7 +2,7 @@
 import SectionTitle from './section-title';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Code, Cloud, HeartPulse, Bus } from 'lucide-react';
+import { Code, Cloud, HeartPulse, Bus, Github } from 'lucide-react';
 
 const projects = {
   software: [
@@ -88,28 +88,34 @@ const projects = {
 };
 
 const ProjectCard = ({ project }: { project: any }) => (
-    <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group">
-        <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+    <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group h-full">
+        <Card className="h-full flex flex-col transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
             <CardHeader>
-                <div className="flex items-center gap-4">
+                <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
                         {project.icon}
                     </div>
-                    <CardTitle>{project.title}</CardTitle>
+                    <CardTitle className="leading-tight">{project.title}</CardTitle>
                 </div>
             </CardHeader>
-            <CardContent>
-                <p className="text-muted-foreground">
+            <CardContent className="flex-grow flex flex-col justify-between">
+                <p className="text-muted-foreground flex-grow">
                     {project.description}
-                    {project.repo && (
-                        <>
-                            {' '}
-                            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-primary underline">
-                                View repository.
-                            </a>
-                        </>
-                    )}
                 </p>
+                {project.repo && (
+                    <div className="mt-4">
+                        <a 
+                            href={project.repo} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                        >
+                            <Github size={16} />
+                            View Repository
+                        </a>
+                    </div>
+                )}
             </CardContent>
         </Card>
     </a>
