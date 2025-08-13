@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from './theme-toggle';
 import { cn } from '@/lib/utils';
-import { Github, Linkedin } from 'lucide-react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Menu } from 'lucide-react';
@@ -15,6 +14,8 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/resume', label: 'Resume' },
   { href: '/projects', label: 'Projects' },
+  { href: '/writings', label: 'Writings' },
+  { href: '/extras', label: 'Extras' },
 ];
 
 const CustomLogo = () => (
@@ -28,20 +29,17 @@ const CustomLogo = () => (
             <defs>
                 <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
-                <stop offset="100%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 0.5 }} />
+                <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
                 </linearGradient>
             </defs>
-            {/* Cloud */}
             <path
-                d="M60,20 A20,20 0 0,0 20,40 A20,20 0 0,0 20,80 H80 A20,20 0 0,0 80,40 A20,20 0 0,0 60,20 Z"
+                d="M 50,20 C 25,20 20,40 20,50 C 20,60 25,80 50,80 C 75,80 80,60 80,50 C 80,40 75,20 50,20 Z"
                 fill="url(#grad1)"
                 stroke="hsl(var(--primary))"
                 strokeWidth="2"
             />
-            {/* Medical Cross */}
             <rect x="45" y="35" width="10" height="30" fill="hsl(var(--primary-foreground))" />
             <rect x="35" y="45" width="30" height="10" fill="hsl(var(--primary-foreground))" />
-            {/* Circuit Lines */}
             <line x1="25" y1="50" x2="35" y2="50" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
             <line x1="65" y1="50" x2="75" y2="50" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
             <line x1="50" y1="35" x2="50" y2="25" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
@@ -58,6 +56,11 @@ const CustomLogo = () => (
 export default function Header() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
+  // Hide header on homepage
+  if (pathname === '/') {
+    return null;
+  }
 
   return (
     <header className="py-4 sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -79,21 +82,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center space-x-2">
-            <a href="https://github.com/calebsenyah" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon">
-                    <Github className="h-5 w-5" />
-                </Button>
-            </a>
-            <a href="https://linkedin.com/in/calebsenyah" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon">
-                    <Linkedin className="h-5 w-5" />
-                </Button>
-            </a>
+        <div className="hidden md:flex items-center">
             <ThemeToggle />
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center">
+          <ThemeToggle />
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -118,19 +112,6 @@ export default function Header() {
                     {link.label}
                   </Link>
                 ))}
-                <div className="flex items-center space-x-2 pt-4 border-t">
-                    <a href="https://github.com/calebsenyah" target="_blank" rel="noopener noreferrer">
-                        <Button variant="ghost" size="icon">
-                            <Github className="h-5 w-5" />
-                        </Button>
-                    </a>
-                    <a href="https://linkedin.com/in/calebsenyah" target="_blank" rel="noopener noreferrer">
-                        <Button variant="ghost" size="icon">
-                            <Linkedin className="h-5 w-5" />
-                        </Button>
-                    </a>
-                    <ThemeToggle />
-                </div>
               </div>
             </SheetContent>
           </Sheet>

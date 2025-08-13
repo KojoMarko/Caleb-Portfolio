@@ -1,48 +1,131 @@
+'use client';
 import SectionTitle from './section-title';
-import { FolderGit } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { Code, Cloud, HeartPulse } from 'lucide-react';
 
-const projects = [
-  {
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce site with product catalogs, shopping cart, and payment integration.',
-    link: 'https://github.com/calebsenyah/ecommerce-platform',
-  },
-  {
-    title: 'Real-time Chat App',
-    description: 'A web-based chat application enabling instant communication between users.',
-    link: 'https://github.com/calebsenyah/chat-app',
-  },
-  {
-    title: 'Data Visualization Dashboard',
-    description: 'An interactive dashboard for visualizing complex datasets with charts and graphs.',
-    link: 'https://github.com/calebsenyah/data-dashboard',
-  },
-];
+const projects = {
+  software: [
+    {
+      title: 'Azushop E-commerce Platform',
+      description: 'A full-featured e-commerce site with product catalogs, shopping cart, and payment integration using React and AWS.',
+      link: 'https://github.com/calebsenyah/ecommerce-platform',
+      icon: <Code className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: 'Gclient Real-time Chat App',
+      description: 'A web-based chat application enabling instant communication between users, built with Next.js and WebSockets.',
+      link: 'https://github.com/calebsenyah/chat-app',
+      icon: <Code className="h-8 w-8 text-primary" />,
+    },
+  ],
+  biomedical: [
+    {
+      title: 'ThermoTrack IoT Solution',
+      description: 'An IoT-based temperature monitoring system for medical supplies, ensuring vaccine and sample integrity during transport.',
+      link: 'https://github.com/calebsenyah/data-dashboard',
+      icon: <HeartPulse className="h-8 w-8 text-primary" />,
+    },
+     {
+      title: 'Aromatase Inhibitor Predictor',
+      description: 'A machine learning model to predict the suitability of aromatase inhibitors for breast cancer patients based on genetic markers.',
+      link: '#',
+      icon: <HeartPulse className="h-8 w-8 text-primary" />,
+    },
+  ],
+  cloud: [
+     {
+      title: 'Scalable Web Hosting Architecture',
+      description: 'Designed and deployed a fault-tolerant, scalable hosting solution on AWS using EC2, S3, and RDS for a high-traffic web application.',
+      link: '#',
+      icon: <Cloud className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: 'Serverless Data Processing Pipeline',
+      description: 'An AWS Lambda-based pipeline to process and analyze large datasets from medical devices in real-time.',
+      link: '#',
+      icon: <Cloud className="h-8 w-8 text-primary" />,
+    },
+  ]
+};
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="services container mx-auto px-4 sm:px-6 lg:px-8">
-      <SectionTitle title="Projects" description="My Git Repos 🔥" />
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-        {projects.map((project, index) => (
-          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
-            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
-                <CardHeader>
-                    <div className="flex items-center gap-4">
-                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
-                            <FolderGit className="h-8 w-8 text-primary" />
-                        </div>
-                        <CardTitle>{project.title}</CardTitle>
+    <section id="projects" className="services">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionTitle title="Projects" description="My Git Repos 🔥" />
+
+            <Tabs defaultValue="software" className="w-full">
+                <TabsList className="grid w-full grid-cols-3">
+                    <TabsTrigger value="software">Software Engineering</TabsTrigger>
+                    <TabsTrigger value="biomedical">Biomedical & IoT</TabsTrigger>
+                    <TabsTrigger value="cloud">Cloud Solutions</TabsTrigger>
+                </TabsList>
+                <TabsContent value="software">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
+                        {projects.software.map((project, index) => (
+                          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
+                            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+                                <CardHeader>
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
+                                            {project.icon}
+                                        </div>
+                                        <CardTitle>{project.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">{project.description}</p>
+                                </CardContent>
+                            </Card>
+                          </a>
+                        ))}
                     </div>
-                </CardHeader>
-                <CardContent>
-                    <p className="text-muted-foreground">{project.description}</p>
-                </CardContent>
-            </Card>
-          </a>
-        ))}
-      </div>
+                </TabsContent>
+                <TabsContent value="biomedical">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
+                        {projects.biomedical.map((project, index) => (
+                          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
+                            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+                                <CardHeader>
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
+                                            {project.icon}
+                                        </div>
+                                        <CardTitle>{project.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">{project.description}</p>
+                                </CardContent>
+                            </Card>
+                          </a>
+                        ))}
+                    </div>
+                </TabsContent>
+                <TabsContent value="cloud">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
+                        {projects.cloud.map((project, index) => (
+                          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
+                            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+                                <CardHeader>
+                                    <div className="flex items-center gap-4">
+                                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
+                                            {project.icon}
+                                        </div>
+                                        <CardTitle>{project.title}</CardTitle>
+                                    </div>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-muted-foreground">{project.description}</p>
+                                </CardContent>
+                            </Card>
+                          </a>
+                        ))}
+                    </div>
+                </TabsContent>
+            </Tabs>
+        </div>
     </section>
   );
 }
