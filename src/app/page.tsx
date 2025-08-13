@@ -25,12 +25,6 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
     </svg>
 );
 
-const MediumIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M5.72 6.54h3.58v10.92H5.72V6.54zM16.14 6.54h4.48v10.92h-4.48zM10.8 6.54h3.86v10.92h-3.86zM0 19.12V4.88h24v14.24H0z"></path>
-    </svg>
-);
-
 
 export default function Home() {
   const pathname = usePathname();
@@ -96,9 +90,7 @@ export default function Home() {
             </a>
             <a href="https://medium.com/@calebsenyah" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
-                        <path d="M5.72 6.54h3.58v10.92H5.72V6.54zM16.14 6.54h4.48v10.92h-4.48zM10.8 6.54h3.86v10.92h-3.86zM0 19.12V4.88h24v14.24H0z"></path>
-                    </svg>
+                     <img src="https://cdn.brandfetch.io/idIlQtGZ76/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667572307063" alt="Caleb's Medium Profile" className="h-6 w-6" />
                 </Button>
             </a>
         </div>
