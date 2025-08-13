@@ -15,7 +15,13 @@ const projects = {
     {
       title: 'Gclient Real-time Chat App',
       description: 'A web-based chat application enabling instant communication between users, built with Next.js and WebSockets.',
-      link: 'https://github.com/calebsenyah/chat-app',
+      link: 'https://github.com/KojoMarko/gclient',
+      icon: <Code className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: 'G-Client Admin Dashboard',
+      description: 'The administrative dashboard for managing the G-Client chat application, users, and conversations.',
+      link: 'https://github.com/KojoMarko/g-client-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
