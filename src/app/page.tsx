@@ -14,6 +14,7 @@ const navLinks = [
   { href: '/projects', label: 'Projects' },
   { href: '/writings', label: 'Writings' },
   { href: '/extras', label: 'Extras' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const CustomLogo = () => (
@@ -61,11 +62,18 @@ export default function Home() {
             <CustomLogo />
         </div>
         <h1 className="text-5xl md:text-7xl font-bold text-foreground">
-          Caleb Makafui Senyah
+          Caleb Makafui Senyah.
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-muted-foreground">
-          I build impactful solutions at the intersection of <span className="text-primary">healthcare</span> and <span className="text-primary">technology</span>.
+        <h2 className="mt-4 text-3xl md:text-5xl font-semibold text-muted-foreground">
+          I build things for the web and health.
+        </h2>
+        <p className="mt-6 max-w-2xl text-lg md:text-xl text-muted-foreground">
+          I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on bridging technology and healthcare to create impactful, real-world solutions.
         </p>
+
+        <Button asChild className="mt-8" size="lg">
+          <Link href="/contact">Get In Touch</Link>
+        </Button>
         
         <nav className="flex items-center space-x-6 mt-12">
           {navLinks.map(link => (

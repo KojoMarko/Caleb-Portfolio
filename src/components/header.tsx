@@ -16,6 +16,7 @@ const navLinks = [
   { href: '/projects', label: 'Projects' },
   { href: '/writings', label: 'Writings' },
   { href: '/extras', label: 'Extras' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 const CustomLogo = () => (
