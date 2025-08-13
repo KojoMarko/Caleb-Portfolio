@@ -73,7 +73,7 @@ export default function Home() {
                     <Linkedin className="h-6 w-6" />
                 </Button>
             </a>
-            <a href="https://x.com/CalebSenyah" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/MakafuiCaleb" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <XIcon className="h-6 w-6" />
                 </Button>
