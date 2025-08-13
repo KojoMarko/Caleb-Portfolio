@@ -20,33 +20,16 @@ const navLinks = [
 const CustomLogo = () => (
     <div className="flex items-center justify-center text-2xl font-bold text-foreground">
         <svg
-            width="80"
+            width="140"
             height="80"
-            viewBox="0 0 100 100"
+            viewBox="0 0 250 100"
             xmlns="http://www.w3.org/2000/svg"
             className="h-auto"
         >
-            <path 
-                d="M 65,15 C 40,15 25,25 25,50 C 25,75 40,85 65,85" 
-                stroke="hsl(var(--primary))" 
-                strokeWidth="12" 
-                fill="none" 
-                strokeLinecap="round"
-            />
-            <path 
-                d="M 60,50 C 60,35 70,25 85,25" 
-                stroke="hsl(var(--accent))" 
-                strokeWidth="12" 
-                fill="none" 
-                strokeLinecap="round"
-            />
-             <path 
-                d="M 40,50 C 40,65 30,75 15,75" 
-                stroke="hsl(var(--accent))" 
-                strokeWidth="12" 
-                fill="none" 
-                strokeLinecap="round"
-            />
+            <g fill="hsl(var(--primary))">
+                <path d="M62.3,63.1H39.2V36.9H62.3V33.1H39.2L35.4,24h30.7V20.2H31.6l-4.2-9H69.4V7.4H23.2l9,25.7H21.4v4.2H35V66.9H21.4V71H35l-9,25.7H69.4V92.6H27.4l4.2-9H66.1V79.8H35.4l3.8-9.2h23.1V66.9h-23l-3.8,9.2H66.1v4.2H39.2V63.1Z"/>
+                <text x="75" y="70" fontFamily="sans-serif" fontSize="60" fill="hsl(var(--foreground))">ALEB</text>
+            </g>
         </svg>
     </div>
 );
