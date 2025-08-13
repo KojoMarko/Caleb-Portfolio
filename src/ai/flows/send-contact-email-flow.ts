@@ -8,6 +8,7 @@
  */
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import {Resend} from 'resend';
 
 const ContactEmailInputSchema = z.object({
   name: z.string().describe('The name of the person sending the message.'),
@@ -25,46 +26,41 @@ export async function sendContactEmail(input: ContactEmailInput): Promise<Contac
   return sendContactEmailFlow(input);
 }
 
-const emailPrompt = ai.definePrompt({
-  name: 'sendContactEmailPrompt',
-  input: {schema: ContactEmailInputSchema},
-  output: {schema: z.object({
-    subject: z.string(),
-    body: z.string(),
-  })},
-  prompt: `Generate an email subject and body for a new contact form submission.
-
-From: {{name}} <{{email}}>
-Message:
-{{{message}}}
-
-The subject should be "New Contact Form Submission from {{name}}".
-The body should be a simple text format of the message.
-`,
-});
-
 const sendContactEmailFlow = ai.defineFlow(
   {
     name: 'sendContactEmailFlow',
     inputSchema: ContactEmailInputSchema,
     outputSchema: ContactEmailOutputSchema,
   },
-  async input => {
-    const {output} = await emailPrompt(input);
-    if (!output) {
-      return {success: false};
+  async ({name, email, message}) => {
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set. Email will be logged to console instead of sent.');
+      console.log('---- New Email ----');
+      console.log(`To: calebsenyah@gmail.com`);
+      console.log(`From: noreply@calebsenyah.com`);
+      console.log(`Reply-To: ${name} <${email}>`);
+      console.log(`Subject: New Contact Form Submission from ${name}`);
+      console.log('');
+      console.log(message);
+      console.log('-------------------');
+      // Return success to avoid showing an error to the user in this case.
+      return {success: true};
     }
     
-    // In a real application, you would integrate with an email sending service like SendGrid or Resend.
-    // For this example, we'll just log the email to the console.
-    console.log('---- New Email ----');
-    console.log(`To: calebsenyah@gmail.com`);
-    console.log(`From: noreply@calebsenyah.com`);
-    console.log(`Subject: ${output.subject}`);
-    console.log('');
-    console.log(output.body);
-    console.log('-------------------');
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    return {success: true};
+    try {
+      await resend.emails.send({
+        from: 'noreply@calebsenyah.com',
+        to: 'calebsenyah@gmail.com',
+        subject: `New Contact Form Submission from ${name}`,
+        reply_to: email,
+        text: message,
+      });
+      return {success: true};
+    } catch (error) {
+      console.error('Error sending email with Resend:', error);
+      return {success: false};
+    }
   }
 );
