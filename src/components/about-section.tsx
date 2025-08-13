@@ -33,7 +33,7 @@ export default function AboutSection() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-sm">
               <div><strong>Email:</strong> calebsenyah@gmail.com</div>
-              <div><strong>GitHub:</strong> <a href="https://github.com/KojoMarko" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">github.com/KojoMarko</a></div>
+              <div><strong>Git:</strong> <a href="https://github.com/KojoMarko" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Check my Github out</a></div>
               <div><strong>City:</strong> Accra, Ghana</div>
             </div>
           </div>
