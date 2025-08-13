@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import SectionTitle from './section-title';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
@@ -103,7 +103,7 @@ const projects = {
   ]
 };
 
-const allTags = Array.from(new Set(Object.values(projects).flat().flatMap(p => p.tags)));
+type ProjectCategory = keyof typeof projects;
 
 const ProjectCard = ({ project }: { project: any }) => (
     <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group h-full">
@@ -146,15 +146,43 @@ const ProjectCard = ({ project }: { project: any }) => (
     </a>
 );
 
+const ProjectList = ({ category, selectedTag }: { category: ProjectCategory, selectedTag: string | null }) => {
+    const filteredProjects = useMemo(() => {
+        const categoryProjects = projects[category];
+        if (!selectedTag) {
+            return categoryProjects;
+        }
+        return categoryProjects.filter(p => p.tags.includes(selectedTag));
+    }, [category, selectedTag]);
+
+    if (filteredProjects.length === 0) {
+        return (
+            <div className="text-center py-16 text-muted-foreground">
+                No projects found for the selected filter.
+            </div>
+        )
+    }
+
+    return (
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
+            {filteredProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+            ))}
+        </div>
+    );
+}
+
 export default function ProjectsSection() {
-    const [activeTab, setActiveTab] = useState('software');
+    const [activeTab, setActiveTab] = useState<ProjectCategory>('software');
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-    const getFilteredProjects = (category: 'software' | 'biomedical' | 'cloud') => {
-        if (!selectedTag) {
-            return projects[category];
-        }
-        return projects[category].filter(p => p.tags.includes(selectedTag));
+    const currentTags = useMemo(() => {
+        return Array.from(new Set(projects[activeTab].flatMap(p => p.tags)));
+    }, [activeTab]);
+
+    const handleTabChange = (value: string) => {
+        setActiveTab(value as ProjectCategory);
+        setSelectedTag(null); // Reset filter when changing tabs
     }
 
   return (
@@ -162,41 +190,30 @@ export default function ProjectsSection() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Projects" description="Where Passion Meets Purpose: Crafting Digital Solutions" />
 
-            <div className="my-8">
-                <div className="flex flex-wrap justify-center gap-2">
-                    <Button variant={!selectedTag ? 'default' : 'secondary'} onClick={() => setSelectedTag(null)}>All</Button>
-                    {allTags.map(tag => (
-                        <Button key={tag} variant={selectedTag === tag ? 'default' : 'secondary'} onClick={() => setSelectedTag(tag)}>{tag}</Button>
-                    ))}
-                </div>
-            </div>
-
-            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
                 <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="software">Software Engineering</TabsTrigger>
                     <TabsTrigger value="biomedical">Biomedical & IoT</TabsTrigger>
                     <TabsTrigger value="cloud">Cloud Solutions</TabsTrigger>
                 </TabsList>
-                <TabsContent value="software" forceMount>
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {getFilteredProjects('software').map((project, index) => (
-                            <ProjectCard key={index} project={project} />
+
+                <div className="my-8">
+                    <div className="flex flex-wrap justify-center gap-2">
+                        <Button variant={!selectedTag ? 'default' : 'secondary'} onClick={() => setSelectedTag(null)}>All</Button>
+                        {currentTags.map(tag => (
+                            <Button key={tag} variant={selectedTag === tag ? 'default' : 'secondary'} onClick={() => setSelectedTag(tag)}>{tag}</Button>
                         ))}
                     </div>
+                </div>
+
+                <TabsContent value="software" forceMount={activeTab === 'software'}>
+                    <ProjectList category="software" selectedTag={selectedTag} />
                 </TabsContent>
-                <TabsContent value="biomedical" forceMount>
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {getFilteredProjects('biomedical').map((project, index) => (
-                           <ProjectCard key={index} project={project} />
-                        ))}
-                    </div>
+                <TabsContent value="biomedical" forceMount={activeTab === 'biomedical'}>
+                   <ProjectList category="biomedical" selectedTag={selectedTag} />
                 </TabsContent>
-                <TabsContent value="cloud" forceMount>
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {getFilteredProjects('cloud').map((project, index) => (
-                           <ProjectCard key={index} project={project} />
-                        ))}
-                    </div>
+                <TabsContent value="cloud" forceMount={activeTab === 'cloud'}>
+                    <ProjectList category="cloud" selectedTag={selectedTag} />
                 </TabsContent>
             </Tabs>
         </div>
