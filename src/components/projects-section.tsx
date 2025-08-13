@@ -26,8 +26,9 @@ const projects = {
     },
     {
       title: 'G-Client Admin Dashboard',
-      description: 'The administrative dashboard for managing the G-Client platform, including users, courses, and content.',
-      link: 'https://github.com/KojoMarko/g-client-admin',
+      description: 'The administrative dashboard for managing the G-Client platform. View the repository on GitHub.',
+      link: 'https://g-client-admin.vercel.app/',
+      repo: 'https://github.com/KojoMarko/g-client-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
@@ -44,8 +45,9 @@ const projects = {
     },
     {
       title: 'DevJobs App',
-      description: 'A frontend project for a job search platform. View the repository on GitHub.',
+      description: 'A frontend project for a job search platform.',
       link: 'https://devjobs-app-seven.vercel.app/',
+      repo: 'https://github.com/KojoMarko/devjobs-app',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
   ],
@@ -106,7 +108,7 @@ export default function ProjectsSection() {
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-muted-foreground">{project.description}
-                                    {project.title === 'DevJobs App' && <a href="https://github.com/KojoMarko/devjobs-app" target="_blank" rel="noopener noreferrer" className="text-primary underline ml-1">View the repository on GitHub.</a>}
+                                    {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-primary underline ml-1">View the repository on GitHub.</a>}
                                     </p>
                                 </CardContent>
                             </Card>
