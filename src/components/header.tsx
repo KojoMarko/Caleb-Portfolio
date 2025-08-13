@@ -28,8 +28,8 @@ const CustomLogo = () => (
       width={160}
       height={80}
       priority
-      className="max-h-10 w-auto"
-      style={{ objectFit: 'contain', height: 'auto', maxHeight: '40px', width: 'auto' }}
+  className="max-h-14 w-auto"
+  style={{ objectFit: 'contain', height: 'auto', maxHeight: '56px', width: 'auto' }}
     />
   </Link>
 );
