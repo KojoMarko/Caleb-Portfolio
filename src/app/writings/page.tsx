@@ -34,6 +34,21 @@ const articles = [
         description: "A beginner-friendly introduction to the core principles of Test-Driven Development and its benefits in creating robust, maintainable code.",
         link: "https://medium.com/@calebmakafui/introduction-to-test-driven-development-tdd-b035r89t554k",
     },
+    {
+        title: "The Role of IoT in Modern Healthcare",
+        description: "An exploration of how Internet of Things devices are revolutionizing patient monitoring and treatment.",
+        link: "#",
+    },
+    {
+        title: "Scalable Frontend Architectures with Next.js",
+        description: "A deep dive into building maintainable and high-performance web applications using Next.js.",
+        link: "#",
+    },
+    {
+        title: "Predictive Analytics in Biomedical Engineering",
+        description: "How machine learning models can forecast patient outcomes and improve diagnostic accuracy.",
+        link: "#",
+    }
 ];
 
 export default function WritingsPage() {
