@@ -1,7 +1,6 @@
 import Header from "@/components/header";
 import Image from "next/image";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import ArtGenerator from "@/components/art-generator";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const extras = [
     {
@@ -36,10 +35,6 @@ export default function ExtrasPage() {
                     </p>
                 </div>
                 
-                <div className="mt-16">
-                    <ArtGenerator />
-                </div>
-
                 <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {extras.map((item) => (
                         <Card key={item.title} className="overflow-hidden">
