@@ -24,6 +24,12 @@ const projects = {
       link: 'https://github.com/KojoMarko/trotro-app',
       icon: <Bus className="h-8 w-8 text-primary" />,
     },
+    {
+      title: 'ThermoTrack IoT Solution',
+      description: 'The user-facing application for the IoT temperature monitoring system, allowing real-time tracking and alerts.',
+      link: 'https://github.com/KojoMarko/thermotrack-app',
+      icon: <Code className="h-8 w-8 text-primary" />,
+    },
   ],
   biomedical: [
     {
