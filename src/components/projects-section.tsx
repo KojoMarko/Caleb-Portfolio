@@ -60,8 +60,8 @@ const projects = {
     {
       title: 'ThermoTrack IoT Solution',
       description: 'An IoT-based temperature monitoring system for medical supplies, ensuring vaccine and sample integrity during transport.',
-      link: 'https://thermotrack-app.vercel.app/',
-      repo: 'https://github.com/KojoMarko/thermotrack-app',
+      link: 'https://github.com/KojoMarko/thermotrack',
+      repo: 'https://github.com/KojoMarko/thermotrack',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
     },
      {
