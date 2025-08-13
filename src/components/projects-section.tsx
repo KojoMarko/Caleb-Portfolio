@@ -145,7 +145,7 @@ const ProjectCard = ({ project }: { project: any }) => (
                             className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                         >
                             {project.repo.includes('linkedin.com') ? <Linkedin size={16} /> : <Github size={16} />}
-                            View Post
+                            {project.repo.includes('linkedin.com') ? 'View Post' : 'View Repo'}
                         </a>
                     </div>
                 )}
