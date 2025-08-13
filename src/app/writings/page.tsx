@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -17,19 +18,19 @@ const articles = [
         title: "Is There Anything Too Hard for God?",
         description: "A reflection on faith and the limitless power of God, encouraging readers to trust in His ability to overcome any challenge.",
         link: "https://medium.com/@calebmakafui/is-there-anything-too-hard-for-god-d01bd524595b",
-        tags: ["Faith"],
+        tags: ["Christianity"],
     },
      {
         title: "Nature Abhors a Vacuum",
         description: "A philosophical reflection on the principle that empty spaces are always filled, exploring its implications on our lives and purpose.",
         link: "https://medium.com/@calebmakafui/nature-abhors-a-vacuum-28e6d71eee9d",
-        tags: ["Philosophy"],
+        tags: ["Christianity"],
     },
     {
         title: "The Ripple Effect of Honor",
         description: "An exploration of how honor and integrity can create far-reaching positive impacts in our personal and professional lives.",
         link: "https://medium.com/@calebmakafui/the-ripple-effect-of-honor-525987df93b6",
-        tags: ["Philosophy", "Life"],
+        tags: ["Christianity"],
     },
     {
         title: "Understanding Frontend Development and the AWS Cloud",
