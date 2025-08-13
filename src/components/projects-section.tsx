@@ -2,7 +2,7 @@
 import SectionTitle from './section-title';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Code, Cloud, HeartPulse } from 'lucide-react';
+import { Code, Cloud, HeartPulse, Bus } from 'lucide-react';
 
 const projects = {
   software: [
@@ -17,6 +17,12 @@ const projects = {
       description: 'A web-based chat application enabling instant communication between users, built with Next.js and WebSockets.',
       link: 'https://github.com/calebsenyah/chat-app',
       icon: <Code className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: 'Trotro App Concept',
+      description: 'A mobile application concept for navigating Ghanas public transport system, featuring real-time tracking and route planning.',
+      link: 'https://github.com/KojoMarko/trotro-app',
+      icon: <Bus className="h-8 w-8 text-primary" />,
     },
   ],
   biomedical: [
