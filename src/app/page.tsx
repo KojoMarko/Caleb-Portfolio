@@ -83,7 +83,7 @@ export default function Home() {
                     <Youtube className="h-6 w-6" />
                 </Button>
             </a>
-            <a href="https://dev.to/calebsenyah" target="_blank" rel="noopener noreferrer">
+            <a href="https://dev.to/calebmakafui" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Caleb's DEV Community Profile" className="h-6 w-6 rounded-md" />
                 </Button>
