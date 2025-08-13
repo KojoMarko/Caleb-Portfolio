@@ -24,6 +24,7 @@ const CustomLogo = () => (
             height="80"
             viewBox="0 0 100 100"
             xmlns="http://www.w3.org/2000/svg"
+            className="h-auto"
         >
             <defs>
                 <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -41,7 +42,7 @@ const CustomLogo = () => (
             <path
                 d="M 50,15 C 75,15 85,35 85,50 C 85,65 75,85 50,85"
                 fill="none"
-                stroke="hsl(var(--primary-foreground))"
+                stroke="hsl(var(--foreground))"
                 strokeWidth="5"
                 strokeDasharray="40 15"
                 strokeLinecap="round"
