@@ -25,9 +25,9 @@ const CustomLogo = () => (
      <Image
         src="/assets/caleb logo.png"
         alt="Caleb Senyah Logo"
-        width={170}
-        height={40}
-        className="h-10 w-auto"
+        width={120}
+        height={32}
+        className="h-8 w-auto"
       />
   </Link>
 );
