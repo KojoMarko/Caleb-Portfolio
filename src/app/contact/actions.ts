@@ -25,7 +25,7 @@ export async function submitContactForm(values: ContactEmailInput): Promise<{ su
       console.error('RESEND_API_KEY is not set. Email will be logged to console instead of sent.');
       console.log('---- New Email ----');
       console.log(`To: calebsenyah@gmail.com`);
-      console.log(`From: noreply@calebsenyah.com`);
+      console.log(`From: onboarding@resend.dev`);
       console.log(`Reply-To: ${name} <${email}>`);
       console.log(`Subject: New Contact Form Submission from ${name}`);
       console.log('');
@@ -38,7 +38,7 @@ export async function submitContactForm(values: ContactEmailInput): Promise<{ su
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-        from: 'noreply@calebsenyah.com',
+        from: 'onboarding@resend.dev',
         to: 'calebsenyah@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
         reply_to: email,
