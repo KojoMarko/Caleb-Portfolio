@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -5,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -17,6 +18,12 @@ const navLinks = [
   { href: '/extras', label: 'Extras' },
   { href: '/contact', label: 'Contact' },
 ];
+
+const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.479l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+    </svg>
+);
 
 
 export default function Home() {
@@ -45,7 +52,7 @@ export default function Home() {
               key={link.href} 
               href={link.href} 
               className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-base font-medium transition-colors hover:text-primary",
                   pathname === link.href ? "text-primary border-b-2 border-primary" : "text-muted-foreground"
               )}
             >
@@ -56,14 +63,34 @@ export default function Home() {
         </nav>
 
         <div className="flex items-center space-x-4 mt-6">
-            <a href="https://github.com/calebsenyah" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/KojoMarko" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <Github className="h-6 w-6" />
                 </Button>
             </a>
-            <a href="https://linkedin.com/in/calebsenyah" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/caleb-senyah/" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <Linkedin className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="https://x.com/MakafuiCaleb" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <XIcon className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="https://youtube.com/@calebmakafui?si=6UyljUt3wXJytNZv" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <Youtube className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="https://dev.to/calebmakafui" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Caleb's DEV Community Profile" className="h-6 w-6 rounded-md" />
+                </Button>
+            </a>
+            <a href="https://medium.com/@calebmakafui" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                     <img src="https://cdn.brandfetch.io/idIlQtGZ76/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667572307063" alt="Caleb's Medium Profile" className="h-6 w-6" />
                 </Button>
             </a>
         </div>

@@ -4,7 +4,7 @@ import SkillsSection from './skills-section';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="about">
+    <section id="about" className="about pt-0">
       <div className="about-me container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle title="About" description="Who am I??? ⚡" />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-8 items-center">
@@ -32,7 +32,8 @@ export default function AboutSection() {
                 </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-sm">
-              <div><strong>Email:</strong> caleb.senyah@example.com</div>
+              <div><strong>Email:</strong> calebsenyah@gmail.com</div>
+              <div><strong>Git:</strong> <a href="https://github.com/KojoMarko" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Check my Github out</a></div>
               <div><strong>City:</strong> Accra, Ghana</div>
             </div>
           </div>
