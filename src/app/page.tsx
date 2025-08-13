@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -5,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
@@ -17,6 +18,18 @@ const navLinks = [
   { href: '/extras', label: 'Extras' },
   { href: '/contact', label: 'Contact' },
 ];
+
+const DevToIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M7.906 19.136c-1.023.23-2.046.345-3.07.345-1.023 0-2.047-.115-3.07-.345v-1.15c1.023.23 2.047.345 3.07.345 1.023 0 2.047-.115 3.07-.345v1.15zM6.352 5.345c.69 0 1.265.575 1.265 1.265v8.303c0 .69-.575 1.265-1.265 1.265H2.047V6.61h4.305v-1.265zm-.23 8.878V7.89H3.125v6.333h2.997zM18.809 9.17l-3.236-3.236-1.023 1.023 2.213 2.213-2.213 2.213 1.023 1.023 3.236-3.236zM15.573 12.64l-1.023 1.023 3.236 3.236 1.023-1.023-3.236-3.236zM12.92 4.14a.97.97 0 0 1 .97.97v13.78a.97.97 0 0 1-.97-.97h-2.19a.97.97 0 0 1-.97-.97V5.11a.97.97 0 0 1 .97-.97h2.19z"></path>
+    </svg>
+);
+
+const MediumIcon = (props: React.SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M5.72 6.54h3.58v10.92H5.72V6.54zM16.14 6.54h4.48v10.92h-4.48zM10.8 6.54h3.86v10.92h-3.86zM0 19.12V4.88h24v14.24H0z"></path>
+    </svg>
+);
 
 
 export default function Home() {
@@ -64,6 +77,26 @@ export default function Home() {
             <a href="https://linkedin.com/in/calebsenyah" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <Linkedin className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <Twitter className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <Youtube className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <DevToIcon className="h-6 w-6" />
+                </Button>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                    <MediumIcon className="h-6 w-6" />
                 </Button>
             </a>
         </div>
