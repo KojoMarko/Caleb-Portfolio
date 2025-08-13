@@ -10,7 +10,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-8 items-center">
           <div className="lg:col-span-1 flex justify-center">
             <Image
-              src="https://firebasestudio-hosting.web.app/images/caleb-senyah.jpeg"
+              src="/assets/polo.jpg"
               alt="Caleb Senyah"
               width={400}
               height={400}
