@@ -9,12 +9,12 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
-export const AssistantInputSchema = z.object({
+const AssistantInputSchema = z.object({
   query: z.string().describe('The user\'s question about Caleb Senyah.'),
 });
 export type AssistantInput = z.infer<typeof AssistantInputSchema>;
 
-export const AssistantOutputSchema = z.object({
+const AssistantOutputSchema = z.object({
   answer: z.string().describe('The AI-generated answer to the user\'s query.'),
 });
 export type AssistantOutput = z.infer<typeof AssistantOutputSchema>;
