@@ -42,7 +42,7 @@ export async function submitContactForm(values: ContactEmailInput): Promise<{ su
         to: 'calebsenyah@gmail.com',
         subject: `New Contact Form Submission from ${name}`,
         reply_to: email,
-        text: message,
+        text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
       });
 
     return { success: true, message: "Thanks for reaching out. I'll get back to you soon." };
