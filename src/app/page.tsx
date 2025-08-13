@@ -11,7 +11,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/resume', label: 'Resume' },
-  { href: '/projects', label: 'Projects' },
+  { href: '/projects',label: 'Projects' },
   { href: '/writings', label: 'Writings' },
   { href: '/extras', label: 'Extras' },
   { href: '/contact', label: 'Contact' },
@@ -26,27 +26,26 @@ const CustomLogo = () => (
             xmlns="http://www.w3.org/2000/svg"
             className="h-auto"
         >
-            <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
-                    <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
-                </linearGradient>
-            </defs>
-            <path
-                d="M 50,15 C 25,15 15,35 15,50 C 15,65 25,85 50,85"
-                fill="none"
-                stroke="url(#grad1)"
-                strokeWidth="10"
+            <path 
+                d="M 65,15 C 40,15 25,25 25,50 C 25,75 40,85 65,85" 
+                stroke="hsl(var(--primary))" 
+                strokeWidth="12" 
+                fill="none" 
                 strokeLinecap="round"
             />
-            <path
-                d="M 50,15 C 75,15 85,35 85,50 C 85,65 75,85 50,85"
-                fill="none"
-                stroke="hsl(var(--foreground))"
-                strokeWidth="5"
-                strokeDasharray="40 15"
+            <path 
+                d="M 60,50 C 60,35 70,25 85,25" 
+                stroke="hsl(var(--accent))" 
+                strokeWidth="12" 
+                fill="none" 
                 strokeLinecap="round"
-                transform="rotate(180 50 50)"
+            />
+             <path 
+                d="M 40,50 C 40,65 30,75 15,75" 
+                stroke="hsl(var(--accent))" 
+                strokeWidth="12" 
+                fill="none" 
+                strokeLinecap="round"
             />
         </svg>
     </div>
