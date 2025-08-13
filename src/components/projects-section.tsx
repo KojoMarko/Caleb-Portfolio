@@ -84,7 +84,7 @@ const projects = {
     },
     {
       title: 'VITROS® 5600 Integrated System installation.',
-      description: 'Hands-on experience in the installation, servicing, and maintenance of critical medical devices including ECG machines, chemistry analyzers, ventilators, and oxygen concentrators.',
+      description: 'Led the installation and commissioning of Vitros 5600 Integrated Systems, a dry chemistry platform known for its reliability and speed. Contributions included system installation, calibration, quality control, and operator support.',
       link: 'https://www.linkedin.com/posts/caleb-senyah_fieldserviceengineer-biomedicalengineering-activity-7343629780044464128-GuwW',
       repo: 'https://www.linkedin.com/posts/caleb-senyah_fieldserviceengineer-biomedicalengineering-activity-7343629780044464128-GuwW',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
@@ -144,7 +144,7 @@ const ProjectCard = ({ project }: { project: any }) => (
                             onClick={(e) => e.stopPropagation()}
                             className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                         >
-                            {project.link.includes('linkedin.com') ? <Linkedin size={16} /> : <Github size={16} />}
+                            {project.repo.includes('linkedin.com') ? <Linkedin size={16} /> : <Github size={16} />}
                             View Post
                         </a>
                     </div>
