@@ -78,7 +78,7 @@ export default function Home() {
                     <XIcon className="h-6 w-6" />
                 </Button>
             </a>
-            <a href="https://www.youtube.com/@codewithcaleb." target="_blank" rel="noopener noreferrer">
+            <a href="https://youtube.com/@calebmakafui?si=6UyljUt3wXJytNZv" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <Youtube className="h-6 w-6" />
                 </Button>
