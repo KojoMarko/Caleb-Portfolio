@@ -29,7 +29,7 @@ const projects = {
     {
       title: 'ThermoTrack IoT Solution',
       description: 'An IoT-based temperature monitoring system for medical supplies, ensuring vaccine and sample integrity during transport.',
-      link: 'https://github.com/calebsenyah/data-dashboard',
+      link: 'https://github.com/KojoMarko/thermotrack-app',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
     },
      {
