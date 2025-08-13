@@ -23,7 +23,7 @@ const navLinks = [
 const CustomLogo = () => (
   <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
      <Image
-        src="/assets/Caleb-logo.svg"
+        src="/assets/caleb logo.png"
         alt="Caleb Senyah Logo"
         width={150}
         height={50}
