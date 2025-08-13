@@ -35,6 +35,11 @@ const articles = [
         link: "https://medium.com/@calebmakafui/introduction-to-test-driven-development-tdd-b035r89t554k",
     },
     {
+        title: "TMP G-Client Learner Platform (Phase 1): Building a Dynamic Navbar with Next.js & TypeScript",
+        description: "A step-by-step guide to creating a responsive navigation bar using Next.js, TypeScript, and Tailwind CSS for a modern learning platform.",
+        link: "https://dev.to/calebmakafui/tmp-gclient-learner-platform-phase-1-building-a-dynamic-navbar-with-nextjs-typescript-and-3p5p",
+    },
+    {
         title: "The Role of IoT in Modern Healthcare",
         description: "An exploration of how Internet of Things devices are revolutionizing patient monitoring and treatment.",
         link: "#",
