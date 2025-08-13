@@ -96,7 +96,9 @@ export default function Home() {
             </a>
             <a href="https://medium.com/@calebsenyah" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
-                    <MediumIcon className="h-6 w-6" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+                        <path d="M5.72 6.54h3.58v10.92H5.72V6.54zM16.14 6.54h4.48v10.92h-4.48zM10.8 6.54h3.86v10.92h-3.86zM0 19.12V4.88h24v14.24H0z"></path>
+                    </svg>
                 </Button>
             </a>
         </div>
