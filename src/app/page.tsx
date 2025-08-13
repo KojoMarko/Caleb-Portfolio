@@ -18,7 +18,7 @@ const navLinks = [
 ];
 
 const CustomLogo = () => (
-    <div className="flex items-center justify-center gap-2 text-2xl font-bold text-foreground">
+    <div className="flex items-center justify-center text-2xl font-bold text-foreground">
         <svg
             width="80"
             height="80"
@@ -27,30 +27,29 @@ const CustomLogo = () => (
         >
             <defs>
                 <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
-                <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
+                    <stop offset="0%" style={{ stopColor: 'hsl(var(--primary))', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: 'hsl(var(--accent))', stopOpacity: 1 }} />
                 </linearGradient>
             </defs>
             <path
-                d="M 50,20 C 25,20 20,40 20,50 C 20,60 25,80 50,80 C 75,80 80,60 80,50 C 80,40 75,20 50,20 Z"
-                fill="url(#grad1)"
-                stroke="hsl(var(--primary))"
-                strokeWidth="2"
+                d="M 50,15 C 25,15 15,35 15,50 C 15,65 25,85 50,85"
+                fill="none"
+                stroke="url(#grad1)"
+                strokeWidth="10"
+                strokeLinecap="round"
             />
-            <rect x="45" y="35" width="10" height="30" fill="hsl(var(--primary-foreground))" />
-            <rect x="35" y="45" width="30" height="10" fill="hsl(var(--primary-foreground))" />
-            <line x1="25" y1="50" x2="35" y2="50" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
-            <line x1="65" y1="50" x2="75" y2="50" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
-            <line x1="50" y1="35" x2="50" y2="25" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
-            <line x1="50" y1="65" x2="50" y2="75" stroke="hsl(var(--primary-foreground))" strokeWidth="2" />
-            <circle cx="25" cy="50" r="3" fill="hsl(var(--primary-foreground))" />
-            <circle cx="75" cy="50" r="3" fill="hsl(var(--primary-foreground))" />
-            <circle cx="50" cy="25" r="3" fill="hsl(var(--primary-foreground))" />
-            <circle cx="50" cy="75" r="3" fill="hsl(var(--primary-foreground))" />
+            <path
+                d="M 50,15 C 75,15 85,35 85,50 C 85,65 75,85 50,85"
+                fill="none"
+                stroke="hsl(var(--primary-foreground))"
+                strokeWidth="5"
+                strokeDasharray="40 15"
+                strokeLinecap="round"
+                transform="rotate(180 50 50)"
+            />
         </svg>
     </div>
 );
-
 
 export default function Home() {
   const pathname = usePathname();
