@@ -9,24 +9,27 @@ const projects = {
     {
       title: 'Azushop E-commerce Platform',
       description: 'A full-featured e-commerce site with product catalogs, shopping cart, and payment integration using React and AWS.',
-      link: 'https://github.com/KojoMarko/azushop',
+      link: 'https://azushop-rose.vercel.app/',
+      repo: 'https://github.com/KojoMarko/azushop',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
       title: 'Azushop Admin Dashboard',
       description: 'The administrative dashboard for managing the Azushop e-commerce platform.',
-      link: 'https://github.com/KojoMarko/azushop-admin',
+      link: 'https://azushop-admin.vercel.app/',
+      repo: 'https://github.com/KojoMarko/azushop-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
       title: 'Gclient Ed-Tech Platform',
       description: 'An educational platform designed to teach tech skills, featuring real-time communication and interactive learning modules.',
-      link: 'https://github.com/KojoMarko/gclient',
+      link: 'https://gclient-brown.vercel.app/',
+      repo: 'https://github.com/KojoMarko/gclient',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
       title: 'G-Client Admin Dashboard',
-      description: 'The administrative dashboard for managing the G-Client platform. View the repository on GitHub.',
+      description: 'The administrative dashboard for managing the G-Client platform.',
       link: 'https://g-client-admin.vercel.app/',
       repo: 'https://github.com/KojoMarko/g-client-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
@@ -34,13 +37,15 @@ const projects = {
     {
       title: 'Trotro App Concept',
       description: 'A mobile application concept for navigating Ghanas public transport system, featuring real-time tracking and route planning.',
-      link: 'https://github.com/KojoMarko/trotro-app',
+      link: 'https://trotro-app-oriu.vercel.app/',
+      repo: 'https://github.com/KojoMarko/trotro-app',
       icon: <Bus className="h-8 w-8 text-primary" />,
     },
     {
       title: 'ThermoTrack IoT Solution',
       description: 'The user-facing application for the IoT temperature monitoring system, allowing real-time tracking and alerts.',
-      link: 'https://github.com/KojoMarko/thermotrack-app',
+      link: 'https://thermotrack-app.vercel.app/',
+      repo: 'https://github.com/KojoMarko/thermotrack-app',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
@@ -55,7 +60,8 @@ const projects = {
     {
       title: 'ThermoTrack IoT Solution',
       description: 'An IoT-based temperature monitoring system for medical supplies, ensuring vaccine and sample integrity during transport.',
-      link: 'https://github.com/KojoMarko/thermotrack-app',
+      link: 'https://thermotrack-app.vercel.app/',
+      repo: 'https://github.com/KojoMarko/thermotrack-app',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
     },
      {
@@ -81,6 +87,34 @@ const projects = {
   ]
 };
 
+const ProjectCard = ({ project }: { project: any }) => (
+    <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group">
+        <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+            <CardHeader>
+                <div className="flex items-center gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
+                        {project.icon}
+                    </div>
+                    <CardTitle>{project.title}</CardTitle>
+                </div>
+            </CardHeader>
+            <CardContent>
+                <p className="text-muted-foreground">
+                    {project.description}
+                    {project.repo && (
+                        <>
+                            {' '}
+                            <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                                View repository.
+                            </a>
+                        </>
+                    )}
+                </p>
+            </CardContent>
+        </Card>
+    </a>
+);
+
 export default function ProjectsSection() {
   return (
     <section id="projects" className="services">
@@ -96,65 +130,21 @@ export default function ProjectsSection() {
                 <TabsContent value="software">
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
                         {projects.software.map((project, index) => (
-                          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
-                            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
-                                <CardHeader>
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
-                                            {project.icon}
-                                        </div>
-                                        <CardTitle>{project.title}</CardTitle>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">{project.description}
-                                    {project.repo && <a href={project.repo} target="_blank" rel="noopener noreferrer" className="text-primary underline ml-1">View the repository on GitHub.</a>}
-                                    </p>
-                                </CardContent>
-                            </Card>
-                          </a>
+                            <ProjectCard key={index} project={project} />
                         ))}
                     </div>
                 </TabsContent>
                 <TabsContent value="biomedical">
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
                         {projects.biomedical.map((project, index) => (
-                          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
-                            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
-                                <CardHeader>
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
-                                            {project.icon}
-                                        </div>
-                                        <CardTitle>{project.title}</CardTitle>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">{project.description}</p>
-                                </CardContent>
-                            </Card>
-                          </a>
+                           <ProjectCard key={index} project={project} />
                         ))}
                     </div>
                 </TabsContent>
                 <TabsContent value="cloud">
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
                         {projects.cloud.map((project, index) => (
-                          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
-                            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
-                                <CardHeader>
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
-                                            {project.icon}
-                                        </div>
-                                        <CardTitle>{project.title}</CardTitle>
-                                    </div>
-                                </CardHeader>
-                                <CardContent>
-                                    <p className="text-muted-foreground">{project.description}</p>
-                                </CardContent>
-                            </Card>
-                          </a>
+                           <ProjectCard key={index} project={project} />
                         ))}
                     </div>
                 </TabsContent>
