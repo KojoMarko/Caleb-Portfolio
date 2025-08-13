@@ -19,7 +19,7 @@ export default function AboutSection() {
             />
           </div>
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold text-primary">Frontend Developer & Biomedical Engineer</h3>
+            <h3 className="text-2xl font-bold text-primary">Software Developer & Biomedical Engineer</h3>
             <div className="my-4 space-y-4 text-muted-foreground">
                 <p>
                 I am Caleb Makafui Senyah, a multidisciplinary professional with expertise in frontend development, AWS cloud solutions, and field service biomedical engineering. My career bridges technology and healthcare, allowing me to design, build, and maintain solutions that enhance both digital platforms and critical medical systems.
