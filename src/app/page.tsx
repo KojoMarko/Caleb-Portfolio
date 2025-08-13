@@ -1,5 +1,4 @@
 
-
 'use client';
 
 import Link from 'next/link';
@@ -23,16 +22,6 @@ const navLinks = [
 const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
       <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.479l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-    </svg>
-);
-
-const DevToIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="108" viewBox="0 0 108 108" fill="currentColor" {...props}>
-        <g id="badge">
-            <path d="M89.33,18.5h-70a4.13,4.13,0,0,0-4.13,4.13v70a4.13,4.13,0,0,0,4.13,4.13h70a4.13,4.13,0,0,0,4.13-4.13v-70A4.13,4.13,0,0,0,89.33,18.5Z" style={{ "fill": "#0a0a0a" }} />
-            <path d="M51.1,38.58,42.6,33.4a.83.83,0,0,0-1.12.33l-4.5,9.45v19a.83.83,0,0,0,1,1l12.44-7.85a.83.83,0,0,0,.5-1.12l-7.2-15.7Z" style={{ "fill": "#fff" }} />
-            <path d="M43,47.88,48,40.7a.83.83,0,0,1,1.12.33l7.66,10.63,14,5.25a.83.83,0,0,1,.33.83.83.83,0,0,1-.5.66l-11.45,8.1L48,74.32a.83.83,0,0,1-1.12,0l-7.66-10.63Z" style={{ "fill": "#fff" }} />
-        </g>
     </svg>
 );
 
@@ -102,7 +91,7 @@ export default function Home() {
             </a>
             <a href="https://dev.to/calebsenyah" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
-                    <DevToIcon className="h-6 w-6" />
+                    <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Caleb's DEV Community Profile" className="h-6 w-6 rounded-md" />
                 </Button>
             </a>
             <a href="https://medium.com/@calebsenyah" target="_blank" rel="noopener noreferrer">
