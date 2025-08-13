@@ -68,7 +68,7 @@ export default function Home() {
                     <Github className="h-6 w-6" />
                 </Button>
             </a>
-            <a href="https://linkedin.com/in/calebsenyah" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/caleb-senyah/" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                     <Linkedin className="h-6 w-6" />
                 </Button>
