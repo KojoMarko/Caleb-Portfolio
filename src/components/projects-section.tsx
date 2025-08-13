@@ -44,7 +44,7 @@ const projects = {
     },
     {
       title: 'DevJobs App',
-      description: 'A platform for finding developer jobs, with search and filter functionalities.',
+      description: 'A frontend project for a job search platform, allowing users to search and filter for developer roles.',
       link: 'https://github.com/KojoMarko/devjobs-app',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
