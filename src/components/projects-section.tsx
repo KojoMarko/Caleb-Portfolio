@@ -44,7 +44,7 @@ const projects = {
     },
     {
       title: 'DevJobs App',
-      description: 'A frontend project for a job search platform, allowing users to search and filter for developer roles.',
+      description: 'A frontend project for a job search platform. View the repository on GitHub.',
       link: 'https://devjobs-app-seven.vercel.app/',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
@@ -105,7 +105,9 @@ export default function ProjectsSection() {
                                     </div>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-muted-foreground">{project.description}</p>
+                                    <p className="text-muted-foreground">{project.description}
+                                    {project.title === 'DevJobs App' && <a href="https://github.com/KojoMarko/devjobs-app" target="_blank" rel="noopener noreferrer" className="text-primary underline ml-1">View the repository on GitHub.</a>}
+                                    </p>
                                 </CardContent>
                             </Card>
                           </a>
