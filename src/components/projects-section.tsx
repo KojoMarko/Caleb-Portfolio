@@ -9,7 +9,13 @@ const projects = {
     {
       title: 'Azushop E-commerce Platform',
       description: 'A full-featured e-commerce site with product catalogs, shopping cart, and payment integration using React and AWS.',
-      link: 'https://github.com/calebsenyah/ecommerce-platform',
+      link: 'https://github.com/KojoMarko/azushop',
+      icon: <Code className="h-8 w-8 text-primary" />,
+    },
+    {
+      title: 'Azushop Admin Dashboard',
+      description: 'The administrative dashboard for managing the Azushop e-commerce platform.',
+      link: 'https://github.com/KojoMarko/azushop-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
     {
