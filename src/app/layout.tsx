@@ -8,8 +8,8 @@ import AiAssistant from '@/components/ai-assistant';
 const raleway = Raleway({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Caleb Senyah | Software Engineer',
-  description: 'Portfolio of Caleb Senyah, a passionate software engineer and full-stack developer.',
+  title: 'Caleb Makafui Senyah | Software Developer & Biomedical Engineer',
+  description: 'Portfolio of Caleb Senyah, a passionate software developer and biomedical engineer.',
 };
 
 export default function RootLayout({
