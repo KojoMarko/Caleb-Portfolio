@@ -9,6 +9,11 @@ const articles = [
         link: "https://medium.com/@calebmakafui/the-ultimate-guide-to-staying-ahead-of-the-competition-as-a-software-developer-in-the-age-of-ai-and-7241a895c85f",
     },
     {
+        title: "Is There Anything Too Hard for God?",
+        description: "A reflection on faith and the limitless power of God, encouraging readers to trust in His ability to overcome any challenge.",
+        link: "https://medium.com/@calebmakafui/is-there-anything-too-hard-for-god-d01bd524595b",
+    },
+    {
         title: "Understanding Frontend Development and the AWS Cloud",
         description: "A comprehensive guide to leveraging AWS services for building and deploying modern, scalable frontend applications.",
         link: "https://medium.com/@calebmakafui/understanding-frontend-development-and-the-aws-cloud-13f51a733e83",
