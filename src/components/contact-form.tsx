@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
+import * as React from 'react';
 
 import { Button } from "@/components/ui/button"
 import {
@@ -16,7 +17,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
-import { Send } from "lucide-react"
+import { Send, Loader } from "lucide-react"
+import { submitContactForm } from "@/app/contact/actions"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -32,6 +34,7 @@ const formSchema = z.object({
 
 export default function ContactForm() {
   const { toast } = useToast()
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -42,15 +45,20 @@ export default function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real application, you would handle the form submission here,
-    // e.g., send an email or save to a database.
-    console.log(values)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    const result = await submitContactForm(values)
+    
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      title: result.success ? "Message Sent!" : "Error",
+      description: result.message,
+      variant: result.success ? "default" : "destructive",
     })
-    form.reset()
+
+    if (result.success) {
+      form.reset()
+    }
+    setIsSubmitting(false);
   }
 
   return (
@@ -63,7 +71,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Name</FormLabel>
               <FormControl>
-                <Input placeholder="Your Name" {...field} />
+                <Input placeholder="Your Name" {...field} disabled={isSubmitting} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -76,7 +84,7 @@ export default function ContactForm() {
             <FormItem>
               <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="your.email@example.com" {...field} />
+                <Input placeholder="your.email@example.com" {...field} disabled={isSubmitting} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -93,14 +101,15 @@ export default function ContactForm() {
                   placeholder="Tell me how I can help."
                   className="min-h-[120px]"
                   {...field}
+                  disabled={isSubmitting}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
-          Send Message <Send className="ml-2 h-4 w-4" />
+        <Button type="submit" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? <><Loader className="animate-spin" /> Sending...</> : <>Send Message <Send className="ml-2 h-4 w-4" /></> }
         </Button>
       </form>
     </Form>
