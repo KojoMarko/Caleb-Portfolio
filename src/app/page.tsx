@@ -20,8 +20,8 @@ const navLinks = [
 const CustomLogo = () => (
     <div className="flex items-center justify-center text-2xl font-bold text-foreground">
         <svg
-            width="140"
-            height="80"
+            width="280"
+            height="160"
             viewBox="0 0 250 100"
             xmlns="http://www.w3.org/2000/svg"
             className="h-auto"
