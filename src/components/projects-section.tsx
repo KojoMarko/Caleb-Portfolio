@@ -3,7 +3,7 @@ import { useState, useMemo } from 'react';
 import SectionTitle from './section-title';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Code, Cloud, HeartPulse, Bus, Github } from 'lucide-react';
+import { Code, Cloud, HeartPulse, Bus, Github, Linkedin } from 'lucide-react';
 import { Button } from './ui/button';
 
 const projects = {
@@ -83,7 +83,7 @@ const projects = {
       tags: ['Machine Learning', 'Biomedical'],
     },
     {
-      title: 'Field Service Engineering',
+      title: 'VITROS® 5600 Integrated System installation.',
       description: 'Hands-on experience in the installation, servicing, and maintenance of critical medical devices including ECG machines, chemistry analyzers, ventilators, and oxygen concentrators.',
       link: 'https://www.linkedin.com/posts/caleb-senyah_fieldserviceengineer-biomedicalengineering-activity-7343629780044464128-GuwW',
       repo: 'https://www.linkedin.com/posts/caleb-senyah_fieldserviceengineer-biomedicalengineering-activity-7343629780044464128-GuwW',
@@ -144,7 +144,7 @@ const ProjectCard = ({ project }: { project: any }) => (
                             onClick={(e) => e.stopPropagation()}
                             className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                         >
-                            <Github size={16} />
+                            {project.link.includes('linkedin.com') ? <Linkedin size={16} /> : <Github size={16} />}
                             View Post
                         </a>
                     </div>
