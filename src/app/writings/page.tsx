@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const articles = [
     {
-        title: "The Ultimate Guide to Staying Ahead of the Competition as a Software Developer in the Age of AI",
+        title: "The Ultimate Guide to Staying Ahead of a Competition as a Software Developer in the Age of AI",
         description: "In the rapidly evolving landscape of software development, the rise of Artificial Intelligence (AI) has been both a catalyst for innovation and a source of apprehension for many developers.",
         link: "https://medium.com/@calebmakafui/the-ultimate-guide-to-staying-ahead-of-the-competition-as-a-software-developer-in-the-age-of-ai-and-7241a895c85f",
     },
@@ -18,6 +18,11 @@ const articles = [
         title: "Nature Abhors a Vacuum",
         description: "A philosophical reflection on the principle that empty spaces are always filled, exploring its implications on our lives and purpose.",
         link: "https://medium.com/@calebmakafui/nature-abhors-a-vacuum-28e6d71eee9d",
+    },
+    {
+        title: "The Ripple Effect of Honor",
+        description: "An exploration of how honor and integrity can create far-reaching positive impacts in our personal and professional lives.",
+        link: "https://medium.com/@calebmakafui/the-ripple-effect-of-honor-525987df93b6",
     },
     {
         title: "Understanding Frontend Development and the AWS Cloud",
