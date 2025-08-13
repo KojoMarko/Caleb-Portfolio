@@ -128,7 +128,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="services">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SectionTitle title="Projects" description="Transforming Challenges into Digital Solutions" />
+            <SectionTitle title="Projects" description="Where Passion Meets Purpose: Crafting Digital Solutions" />
 
             <Tabs defaultValue="software" className="w-full">
                 <TabsList className="grid w-full grid-cols-3">
