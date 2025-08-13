@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
@@ -19,18 +20,13 @@ const navLinks = [
 
 const CustomLogo = () => (
     <div className="flex items-center justify-center text-2xl font-bold text-foreground">
-        <svg
-            width="280"
-            height="160"
-            viewBox="0 0 250 100"
-            xmlns="http://www.w3.org/2000/svg"
+        <Image
+            src="/assets/Caleb-logo.svg"
+            alt="Caleb Senyah Logo"
+            width={420}
+            height={240}
             className="h-auto"
-        >
-            <g fill="hsl(var(--primary))">
-                <path d="M62.3,63.1H39.2V36.9H62.3V33.1H39.2L35.4,24h30.7V20.2H31.6l-4.2-9H69.4V7.4H23.2l9,25.7H21.4v4.2H35V66.9H21.4V71H35l-9,25.7H69.4V92.6H27.4l4.2-9H66.1V79.8H35.4l3.8-9.2h23.1V66.9h-23l-3.8,9.2H66.1v4.2H39.2V63.1Z"/>
-                <text x="75" y="70" fontFamily="sans-serif" fontSize="60" fill="hsl(var(--foreground))">ALEB</text>
-            </g>
-        </svg>
+        />
     </div>
 );
 
