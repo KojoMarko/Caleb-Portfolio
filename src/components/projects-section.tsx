@@ -68,6 +68,7 @@ const projects = {
       title: 'Aromatase Inhibitor Predictor',
       description: 'A machine learning model to predict the suitability of aromatase inhibitors for breast cancer patients based on genetic markers.',
       link: '#',
+      repo: '#',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
     },
   ],
@@ -76,12 +77,14 @@ const projects = {
       title: 'Scalable Web Hosting Architecture',
       description: 'Designed and deployed a fault-tolerant, scalable hosting solution on AWS using EC2, S3, and RDS for a high-traffic web application.',
       link: '#',
+      repo: '#',
       icon: <Cloud className="h-8 w-8 text-primary" />,
     },
     {
       title: 'Serverless Data Processing Pipeline',
       description: 'An AWS Lambda-based pipeline to process and analyze large datasets from medical devices in real-time.',
       link: '#',
+      repo: '#',
       icon: <Cloud className="h-8 w-8 text-primary" />,
     },
   ]
@@ -102,7 +105,7 @@ const ProjectCard = ({ project }: { project: any }) => (
                 <p className="text-muted-foreground flex-grow">
                     {project.description}
                 </p>
-                {project.repo && (
+                {project.repo && project.repo !== '#' && (
                     <div className="mt-4">
                         <a 
                             href={project.repo} 
@@ -125,7 +128,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="services">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SectionTitle title="Projects" description="Bringing Ideas to Life Through Code" />
+            <SectionTitle title="Projects" description="Transforming Challenges into Digital Solutions" />
 
             <Tabs defaultValue="software" className="w-full">
                 <TabsList className="grid w-full grid-cols-3">
