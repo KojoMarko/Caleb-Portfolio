@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${raleway.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
