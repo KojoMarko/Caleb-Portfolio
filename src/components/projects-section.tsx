@@ -82,6 +82,14 @@ const projects = {
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
       tags: ['Machine Learning', 'Biomedical'],
     },
+    {
+      title: 'Field Service Engineering',
+      description: 'Hands-on experience in the installation, servicing, and maintenance of critical medical devices including ECG machines, chemistry analyzers, ventilators, and oxygen concentrators.',
+      link: 'https://www.linkedin.com/posts/caleb-senyah_fieldserviceengineer-biomedicalengineering-activity-7343629780044464128-GuwW',
+      repo: 'https://www.linkedin.com/posts/caleb-senyah_fieldserviceengineer-biomedicalengineering-activity-7343629780044464128-GuwW',
+      icon: <HeartPulse className="h-8 w-8 text-primary" />,
+      tags: ['Biomedical', 'Field Service'],
+    }
   ],
   cloud: [
      {
@@ -137,7 +145,7 @@ const ProjectCard = ({ project }: { project: any }) => (
                             className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
                         >
                             <Github size={16} />
-                            View Repository
+                            View Post
                         </a>
                     </div>
                 )}
