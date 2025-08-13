@@ -42,6 +42,12 @@ const projects = {
       link: 'https://github.com/KojoMarko/thermotrack-app',
       icon: <Code className="h-8 w-8 text-primary" />,
     },
+    {
+      title: 'DevJobs App',
+      description: 'A platform for finding developer jobs, with search and filter functionalities.',
+      link: 'https://github.com/KojoMarko/devjobs-app',
+      icon: <Code className="h-8 w-8 text-primary" />,
+    },
   ],
   biomedical: [
     {
