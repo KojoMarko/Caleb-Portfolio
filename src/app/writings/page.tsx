@@ -4,19 +4,19 @@ import { ArrowRight } from "lucide-react";
 
 const articles = [
     {
-        title: "The Role of IoT in Modern Healthcare",
-        description: "An exploration of how Internet of Things devices are revolutionizing patient monitoring and treatment.",
-        link: "#",
+        title: "The Ultimate Guide to Staying Ahead of the Competition as a Software Developer in the Age of AI",
+        description: "In the rapidly evolving landscape of software development, the rise of Artificial Intelligence (AI) has been both a catalyst for innovation and a source of apprehension for many developers.",
+        link: "https://medium.com/@calebmakafui/the-ultimate-guide-to-staying-ahead-of-the-competition-as-a-software-developer-in-the-age-of-ai-and-7241a895c85f",
     },
     {
-        title: "Scalable Frontend Architectures with Next.js",
-        description: "A deep dive into building maintainable and high-performance web applications using Next.js.",
-        link: "#",
+        title: "Understanding Frontend Development and the AWS Cloud",
+        description: "A comprehensive guide to leveraging AWS services for building and deploying modern, scalable frontend applications.",
+        link: "https://medium.com/@calebmakafui/understanding-frontend-development-and-the-aws-cloud-13f51a733e83",
     },
     {
-        title: "Predictive Analytics in Biomedical Engineering",
-        description: "How machine learning models can forecast patient outcomes and improve diagnostic accuracy.",
-        link: "#",
+        title: "Introduction to Test-Driven Development (TDD)",
+        description: "A beginner-friendly introduction to the core principles of Test-Driven Development and its benefits in creating robust, maintainable code.",
+        link: "https://medium.com/@calebmakafui/introduction-to-test-driven-development-tdd-b035r89t554k",
     },
 ];
 
