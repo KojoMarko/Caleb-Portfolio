@@ -1,8 +1,10 @@
 'use client';
+import { useState } from 'react';
 import SectionTitle from './section-title';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Code, Cloud, HeartPulse, Bus, Github } from 'lucide-react';
+import { Button } from './ui/button';
 
 const projects = {
   software: [
@@ -12,6 +14,7 @@ const projects = {
       link: 'https://azushop-rose.vercel.app/',
       repo: 'https://github.com/KojoMarko/azushop',
       icon: <Code className="h-8 w-8 text-primary" />,
+      tags: ['React', 'AWS', 'E-commerce'],
     },
     {
       title: 'Azushop Admin Dashboard',
@@ -19,6 +22,7 @@ const projects = {
       link: 'https://azushop-admin.vercel.app/',
       repo: 'https://github.com/KojoMarko/azushop-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
+      tags: ['React', 'Admin'],
     },
     {
       title: 'Gclient Ed-Tech Platform',
@@ -26,6 +30,7 @@ const projects = {
       link: 'https://gclient-brown.vercel.app/',
       repo: 'https://github.com/KojoMarko/gclient',
       icon: <Code className="h-8 w-8 text-primary" />,
+      tags: ['React', 'Ed-Tech'],
     },
     {
       title: 'G-Client Admin Dashboard',
@@ -33,6 +38,7 @@ const projects = {
       link: 'https://g-client-admin.vercel.app/',
       repo: 'https://github.com/KojoMarko/g-client-admin',
       icon: <Code className="h-8 w-8 text-primary" />,
+      tags: ['React', 'Admin'],
     },
     {
       title: 'Trotro App Concept',
@@ -40,6 +46,7 @@ const projects = {
       link: 'https://trotro-app-oriu.vercel.app/',
       repo: 'https://github.com/KojoMarko/trotro-app',
       icon: <Bus className="h-8 w-8 text-primary" />,
+      tags: ['Mobile', 'Concept'],
     },
     {
       title: 'ThermoTrack IoT Solution',
@@ -47,6 +54,7 @@ const projects = {
       link: 'https://thermotrack-app.vercel.app/',
       repo: 'https://github.com/KojoMarko/thermotrack-app',
       icon: <Code className="h-8 w-8 text-primary" />,
+      tags: ['IoT', 'React', 'Next.js'],
     },
     {
       title: 'DevJobs App',
@@ -54,6 +62,7 @@ const projects = {
       link: 'https://devjobs-app-seven.vercel.app/',
       repo: 'https://github.com/KojoMarko/devjobs-app',
       icon: <Code className="h-8 w-8 text-primary" />,
+      tags: ['React', 'Frontend'],
     },
   ],
   biomedical: [
@@ -63,6 +72,7 @@ const projects = {
       link: 'https://github.com/KojoMarko/thermotrack',
       repo: 'https://github.com/KojoMarko/thermotrack',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
+      tags: ['IoT', 'Biomedical', 'Hardware'],
     },
      {
       title: 'Aromatase Inhibitor Predictor',
@@ -70,6 +80,7 @@ const projects = {
       link: '#',
       repo: '#',
       icon: <HeartPulse className="h-8 w-8 text-primary" />,
+      tags: ['Machine Learning', 'Biomedical'],
     },
   ],
   cloud: [
@@ -79,6 +90,7 @@ const projects = {
       link: '#',
       repo: '#',
       icon: <Cloud className="h-8 w-8 text-primary" />,
+      tags: ['AWS', 'Architecture', 'EC2', 'S3'],
     },
     {
       title: 'Serverless Data Processing Pipeline',
@@ -86,9 +98,12 @@ const projects = {
       link: '#',
       repo: '#',
       icon: <Cloud className="h-8 w-8 text-primary" />,
+      tags: ['AWS', 'Serverless', 'Lambda'],
     },
   ]
 };
+
+const allTags = Array.from(new Set(Object.values(projects).flat().flatMap(p => p.tags)));
 
 const ProjectCard = ({ project }: { project: any }) => (
     <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group h-full">
@@ -102,9 +117,16 @@ const ProjectCard = ({ project }: { project: any }) => (
                 </div>
             </CardHeader>
             <CardContent className="flex-grow flex flex-col justify-between">
-                <p className="text-muted-foreground flex-grow">
-                    {project.description}
-                </p>
+                <div>
+                    <p className="text-muted-foreground flex-grow">
+                        {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                        {project.tags.map((tag: string) => (
+                            <span key={tag} className="text-xs bg-secondary text-secondary-foreground px-2 py-1 rounded-full">{tag}</span>
+                        ))}
+                    </div>
+                </div>
                 {project.repo && project.repo !== '#' && (
                     <div className="mt-4">
                         <a 
@@ -125,34 +147,53 @@ const ProjectCard = ({ project }: { project: any }) => (
 );
 
 export default function ProjectsSection() {
+    const [activeTab, setActiveTab] = useState('software');
+    const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+    const getFilteredProjects = (category: 'software' | 'biomedical' | 'cloud') => {
+        if (!selectedTag) {
+            return projects[category];
+        }
+        return projects[category].filter(p => p.tags.includes(selectedTag));
+    }
+
   return (
     <section id="projects" className="services">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SectionTitle title="Projects" description="Where Passion Meets Purpose: Crafting Digital Solutions" />
 
-            <Tabs defaultValue="software" className="w-full">
+            <div className="my-8">
+                <div className="flex flex-wrap justify-center gap-2">
+                    <Button variant={!selectedTag ? 'default' : 'secondary'} onClick={() => setSelectedTag(null)}>All</Button>
+                    {allTags.map(tag => (
+                        <Button key={tag} variant={selectedTag === tag ? 'default' : 'secondary'} onClick={() => setSelectedTag(tag)}>{tag}</Button>
+                    ))}
+                </div>
+            </div>
+
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="software">Software Engineering</TabsTrigger>
                     <TabsTrigger value="biomedical">Biomedical & IoT</TabsTrigger>
                     <TabsTrigger value="cloud">Cloud Solutions</TabsTrigger>
                 </TabsList>
-                <TabsContent value="software">
+                <TabsContent value="software" forceMount>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {projects.software.map((project, index) => (
+                        {getFilteredProjects('software').map((project, index) => (
                             <ProjectCard key={index} project={project} />
                         ))}
                     </div>
                 </TabsContent>
-                <TabsContent value="biomedical">
+                <TabsContent value="biomedical" forceMount>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {projects.biomedical.map((project, index) => (
+                        {getFilteredProjects('biomedical').map((project, index) => (
                            <ProjectCard key={index} project={project} />
                         ))}
                     </div>
                 </TabsContent>
-                <TabsContent value="cloud">
+                <TabsContent value="cloud" forceMount>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
-                        {projects.cloud.map((project, index) => (
+                        {getFilteredProjects('cloud').map((project, index) => (
                            <ProjectCard key={index} project={project} />
                         ))}
                     </div>

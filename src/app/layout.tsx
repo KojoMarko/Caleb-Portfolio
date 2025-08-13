@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from '@/components/theme-provider';
 import { Raleway } from 'next/font/google';
+import AiAssistant from '@/components/ai-assistant';
 
 const raleway = Raleway({ subsets: ['latin'] })
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <AiAssistant />
           <Toaster />
         </ThemeProvider>
       </body>

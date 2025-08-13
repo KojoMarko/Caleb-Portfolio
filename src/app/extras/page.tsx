@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import ArtGenerator from "@/components/art-generator";
 
 const extras = [
     {
@@ -33,6 +34,10 @@ export default function ExtrasPage() {
                     <p className="mt-4 text-lg leading-8 text-muted-foreground">
                         A collection of my design concepts, 3D models, and other creative projects.
                     </p>
+                </div>
+                
+                <div className="mt-16">
+                    <ArtGenerator />
                 </div>
 
                 <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
