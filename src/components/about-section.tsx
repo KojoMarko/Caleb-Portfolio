@@ -4,7 +4,7 @@ import SectionHeading from './section-heading';
 export default function AboutSection() {
   return (
     <section id="about" className="py-24">
-      <SectionHeading number="01." title="About Me" />
+      <SectionHeading title="About Me" />
       <div className="mt-8 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-start">
         <div className="md:col-span-3 space-y-4 text-muted-foreground text-lg leading-relaxed">
           <p>
@@ -18,7 +18,7 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="md:col-span-2 relative group w-full max-w-sm mx-auto">
-          <div className="absolute top-4 left-4 w-full h-full border-2 border-primary rounded-lg transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1"></div>
+          <div className="absolute -inset-1.5 bg-gradient-to-r from-primary/50 to-primary rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
           <Image
             src="https://placehold.co/400x400.png"
             alt="Caleb Senyah"

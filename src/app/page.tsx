@@ -20,7 +20,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <footer className="py-6 text-center text-muted-foreground">
-        <div className="flex items-center justify-center space-x-6 mb-4 md:hidden">
+        <div className="flex items-center justify-center space-x-6 mb-4">
           <a href="https://github.com/calebsenyah" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
             <Github className="h-6 w-6" />
           </a>
