@@ -14,7 +14,7 @@ export default function ExperienceSection() {
                 <div className="flex items-center justify-center gap-2">
                     My Journey 💼
                     <Button asChild variant="link" className="p-0 h-auto">
-                        <a href="/Caleb-Senyah-Resume.pdf" download className="flex items-center gap-1 text-primary">
+                        <a href="/assets/CALEB MAKAFUI SENYAH RESUME.pdf" download className="flex items-center gap-1 text-primary">
                             Download <Download size={16} />
                         </a>
                     </Button>
