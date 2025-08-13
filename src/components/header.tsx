@@ -21,13 +21,13 @@ const navLinks = [
 ];
 
 const CustomLogo = () => (
-  <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
+  <Link href="/" className="flex items-center text-2xl font-bold text-foreground">
      <Image
         src="/assets/caleb logo.png"
         alt="Caleb Senyah Logo"
-        width={150}
-        height={50}
-        className="h-auto"
+        width={170}
+        height={40}
+        className="h-10 w-auto"
       />
   </Link>
 );
