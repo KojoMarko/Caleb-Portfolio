@@ -6,7 +6,7 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-    --primary: 262.1 83.3% 57.8%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 20% 98%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -24,13 +24,12 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
-    --primary-bright: 43, 93%, 54%;
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
+    --background: 240 10% 3.9%;
     --foreground: 210 20% 98%;
-    --primary: 43, 93%, 54%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 20% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 210 20% 98%;
@@ -56,6 +55,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
   section {
     @apply py-16 overflow-hidden;
@@ -63,23 +63,15 @@
 }
 
 .section-title h2 {
-    @apply text-4xl font-bold mb-2 text-foreground;
+  @apply text-4xl font-bold mb-4 text-foreground;
 }
 
 .section-title p {
-    @apply text-lg text-muted-foreground;
+  @apply text-lg text-muted-foreground;
 }
 
 .section-title {
-  @apply pb-8;
-}
-
-.section-title h2 {
-  @apply text-2xl font-bold;
-}
-
-.section-title p {
-  @apply text-sm text-muted-foreground;
+  @apply pb-8 text-center;
 }
 
 .skills .progress {
@@ -99,25 +91,24 @@
   @apply bg-primary h-2.5;
 }
 
-.interests .icon-box {
-  @apply flex items-center p-5 transition-colors duration-300;
-  @apply border border-border hover:border-primary;
-}
-
-.interests .icon-box .icon {
-  @apply mr-4 text-primary text-3xl;
-}
-
-.interests .icon-box h3 {
-  @apply text-foreground font-semibold text-lg m-0;
-}
-
 .resume .resume-title {
-  @apply text-2xl font-bold mt-5 mb-5;
+  @apply text-2xl font-bold mt-5 mb-5 text-primary;
 }
 
 .resume .resume-item {
-  @apply pl-5 pt-0 pb-5 border-l-2 border-primary;
+  @apply pl-6 pt-0 pb-5 border-l-2 border-primary relative;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid hsl(var(--primary));
+  background: hsl(var(--background));
 }
 
 .resume .resume-item h4 {
@@ -125,7 +116,7 @@
 }
 
 .resume .resume-item h5 {
-  @apply text-base font-semibold bg-secondary px-2 py-1 inline-block my-2;
+  @apply text-base font-semibold bg-secondary px-4 py-2 inline-block my-2;
 }
 
 .resume .resume-item em {

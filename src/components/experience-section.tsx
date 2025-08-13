@@ -6,11 +6,11 @@ import { Button } from './ui/button';
 
 export default function ExperienceSection() {
   return (
-    <section id="resume" className="resume container mx-auto px-6">
+    <section id="resume" className="resume container mx-auto px-4 sm:px-6 lg:px-8">
       <SectionTitle 
           title="Resume" 
           description={
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
                   My Resume 💼
                   <Button asChild variant="link" className="p-0 h-auto">
                       <a href="/Caleb-Senyah-Resume.pdf" download className="flex items-center gap-1 text-primary">

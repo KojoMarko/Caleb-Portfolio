@@ -1,5 +1,6 @@
 import SectionTitle from './section-title';
 import { FolderGit } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 const projects = [
   {
@@ -21,18 +22,24 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="services container mx-auto px-6">
+    <section id="projects" className="services container mx-auto px-4 sm:px-6 lg:px-8">
       <SectionTitle title="Projects" description="My Git Repos 🔥" />
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-8">
         {projects.map((project, index) => (
-          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block p-6 bg-secondary rounded-lg hover:shadow-lg transition-shadow group">
-            <div className="flex flex-col items-start gap-4">
-              <div className="icon-box-project bg-primary p-3 rounded-full">
-                <FolderGit className="h-8 w-8 text-primary-foreground" />
-              </div>
-              <h4 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h4>
-              <p className="text-muted-foreground">{project.description}</p>
-            </div>
+          <a href={project.link} key={index} target="_blank" rel="noopener noreferrer" className="block group">
+            <Card className="h-full transition-all duration-300 group-hover:border-primary group-hover:shadow-lg">
+                <CardHeader>
+                    <div className="flex items-center gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30">
+                            <FolderGit className="h-8 w-8 text-primary" />
+                        </div>
+                        <CardTitle>{project.title}</CardTitle>
+                    </div>
+                </CardHeader>
+                <CardContent>
+                    <p className="text-muted-foreground">{project.description}</p>
+                </CardContent>
+            </Card>
           </a>
         ))}
       </div>

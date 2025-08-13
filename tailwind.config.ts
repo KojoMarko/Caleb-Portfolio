@@ -8,10 +8,16 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       fontFamily: {
-        sans: ['"Open Sans"', 'sans-serif'],
-        mono: ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace'],
+        sans: ['var(--font-sans)', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
       },
       colors: {
@@ -28,7 +34,6 @@ export default {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
-          bright: 'hsl(var(--primary-bright))'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
