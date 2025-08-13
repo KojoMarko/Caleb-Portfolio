@@ -18,17 +18,6 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
-const CustomLogo = () => (
-    <div className="flex items-center justify-center text-2xl font-bold text-foreground">
-        <Image
-            src="/assets/caleb logo.png"
-            alt="Caleb Senyah Logo"
-            width={420}
-            height={240}
-            className="h-auto"
-        />
-    </div>
-);
 
 export default function Home() {
   const pathname = usePathname();
@@ -36,9 +25,6 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow flex flex-col items-center justify-center text-center container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-            <CustomLogo />
-        </div>
         <h1 className="text-5xl md:text-7xl font-bold text-foreground">
           Caleb Makafui Senyah.
         </h1>
