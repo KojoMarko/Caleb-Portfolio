@@ -40,6 +40,11 @@ const articles = [
         link: "https://dev.to/calebmakafui/tmp-gclient-learner-platform-phase-1-building-a-dynamic-navbar-with-nextjs-typescript-and-3p5p",
     },
     {
+        title: "TMP G-Client Learner Platform (Phase 1): Building a Learner Portal with Next.js & TypeScript",
+        description: "A step-by-step guide on building a learner portal using Next.js, TypeScript, and modern development practices.",
+        link: "https://dev.to/calebmakafui/tmp-gclient-learner-platform-phase-1-building-a-learner-portal-with-nextjs-typescript-and-38jm",
+    },
+    {
         title: "The Role of IoT in Modern Healthcare",
         description: "An exploration of how Internet of Things devices are revolutionizing patient monitoring and treatment.",
         link: "#",
