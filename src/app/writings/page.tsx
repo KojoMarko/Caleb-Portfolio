@@ -13,6 +13,11 @@ const articles = [
         description: "A reflection on faith and the limitless power of God, encouraging readers to trust in His ability to overcome any challenge.",
         link: "https://medium.com/@calebmakafui/is-there-anything-too-hard-for-god-d01bd524595b",
     },
+     {
+        title: "Nature Abhors a Vacuum",
+        description: "A philosophical reflection on the principle that empty spaces are always filled, exploring its implications on our lives and purpose.",
+        link: "https://medium.com/@calebmakafui/nature-abhors-a-vacuum-28e6d71eee9d",
+    },
     {
         title: "Understanding Frontend Development and the AWS Cloud",
         description: "A comprehensive guide to leveraging AWS services for building and deploying modern, scalable frontend applications.",
