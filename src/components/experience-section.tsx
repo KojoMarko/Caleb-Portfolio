@@ -1,3 +1,4 @@
+
 'use client';
 
 import SectionTitle from './section-title';
@@ -65,7 +66,7 @@ export default function ExperienceSection() {
 
             <div>
                  <h3 className="resume-title invisible md:visible"></h3>
-                <div className="resume-item mt-0 md:mt-16">
+                 <div className="resume-item mt-0 md:mt-16">
                     <h4>Trainee Frontend Developer & AWS Cloud Solution Architect</h4>
                     <h5>November 2022 - October 2023</h5>
                     <p className="font-medium italic">Azubi Africa, Accra, Ghana</p>
