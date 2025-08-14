@@ -35,7 +35,7 @@ export default function ExperienceSection() {
                 </div>
 
                 <h3 className="resume-title">Professional Experience</h3>
-                 <div className="resume-item">
+                <div className="resume-item">
                     <h4>Field Service Biomedical Engineer</h4>
                     <h5>April 2025 - Present</h5>
                     <p className="font-medium italic">Alos Paraklet Health Care Ltd, Accra, Ghana</p>
