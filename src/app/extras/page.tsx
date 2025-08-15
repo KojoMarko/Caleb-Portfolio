@@ -25,8 +25,8 @@ const extras = [
 
 const videos = [
     {
-        title: "My Tech Career Journey",
-        description: "A video documenting my journey into tech, the challenges, and the wins. This video provides insights into my transition into the tech industry and the lessons I've learned along the way.",
+        title: "How to Use a Glucometer",
+        description: "A step-by-step tutorial on how to properly use a glucometer to check blood sugar levels. A practical guide for patients and caregivers.",
         embedUrl: "https://www.youtube.com/embed/rU3MZQ3N17A",
     }
 ]
