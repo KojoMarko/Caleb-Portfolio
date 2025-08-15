@@ -1,4 +1,5 @@
 
+
 'use client';
 
 import SectionTitle from './section-title';
@@ -22,7 +23,7 @@ export default function ExperienceSection() {
                 </div>
             }
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12">
             <div>
                 <h3 className="resume-title">Education</h3>
                 <div className="resume-item">
@@ -33,9 +34,33 @@ export default function ExperienceSection() {
                         Presented a project on using machine learning to predict aromatase inhibitor suitability for breast cancer patients at a biennial science conference.
                     </p>
                 </div>
+                 <div className="resume-item">
+                    <h4 className="text-xl font-semibold">Frontend Development & AWS Cloud</h4>
+                    <h5>2022 - 2023</h5>
+                    <p className="font-medium">Azubi Africa</p>
+                     <ul className="list-disc mt-2 text-muted-foreground space-y-1">
+                        <li>Designed and deployed 3 interactive UIs, enhancing engagement by 20%.</li>
+                        <li>Implemented the adoption and use of source control systems, notably Git, across 3 React application projects.</li>
+                        <li>Architected highly available, fault-tolerant, and scalable AWS cloud architectures for over 20 use cases.</li>
+                    </ul>
+                </div>
 
-                <h3 className="resume-title">Professional Experience</h3>
-                <div className="resume-item">
+                <h3 className="resume-title">Volunteer Experience</h3>
+                 <div className="resume-item">
+                    <h4>Applications Manager</h4>
+                    <h5>January 2020 - Present</h5>
+                    <p className="font-medium italic">Rhema Outreach Church, Love Temple, Tema, Ghana</p>
+                     <ul className="list-disc mt-2 text-muted-foreground space-y-1">
+                        <li>Manage and optimize Church Management Software (ChMS) platforms like Planning Center and Breeze.</li>
+                        <li>Ensure all applications, including accounting software and streaming tools, are up to date.</li>
+                         <li>Provide technical support to church staff and volunteers.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                 <h3 className="resume-title">Professional Experience</h3>
+                 <div className="resume-item">
                     <h4>Field Service Biomedical Engineer</h4>
                     <h5>April 2025 - Present</h5>
                     <p className="font-medium italic">Alos Paraklet Health Care Ltd, Accra, Ghana</p>
@@ -62,39 +87,13 @@ export default function ExperienceSection() {
                         <li>Managed telecom and broadcasting systems, ensuring 90%+ uptime for port operations.</li>
                     </ul>
                 </div>
-            </div>
-
-            <div>
-                 <h3 className="resume-title invisible md:visible"></h3>
-                 <div className="resume-item mt-0 md:mt-16">
-                    <h4>Trainee Frontend Developer & AWS Cloud Solution Architect</h4>
-                    <h5>November 2022 - October 2023</h5>
-                    <p className="font-medium italic">Azubi Africa, Accra, Ghana</p>
-                     <ul className="list-disc mt-2 text-muted-foreground space-y-1">
-                        <li>Designed and deployed 3 interactive UIs, enhancing engagement by 20%.</li>
-                        <li>Implemented the adoption and use of source control systems, notably Git, across 3 React application projects.</li>
-                        <li>Architected highly available, fault-tolerant, and scalable AWS cloud architectures for over 20 use cases.</li>
-                    </ul>
-                </div>
-                <div className="resume-item">
+                 <div className="resume-item">
                     <h4>Graduate Trainee Biomedical Engineer</h4>
                     <h5>December 2022 – June 2023</h5>
                     <p className="font-medium italic">Ghana Ports and Harbors Authority, International Maritime Hospital</p>
                     <ul className="list-disc mt-2 text-muted-foreground space-y-1">
                         <li>Conducted daily maintenance of oxygen systems on dialysis machines.</li>
                         <li>Optimized medical equipment troubleshooting; reduced failures by 25% through scheduled maintenance.</li>
-                    </ul>
-                </div>
-                
-                 <h3 className="resume-title">Volunteer</h3>
-                <div className="resume-item">
-                    <h4>Applications Manager</h4>
-                    <h5>January 2020 - Present</h5>
-                    <p className="font-medium italic">Rhema Outreach Church, Love Temple, Tema, Ghana</p>
-                     <ul className="list-disc mt-2 text-muted-foreground space-y-1">
-                        <li>Manage and optimize Church Management Software (ChMS) platforms like Planning Center and Breeze.</li>
-                        <li>Ensure all applications, including accounting software and streaming tools, are up to date.</li>
-                         <li>Provide technical support to church staff and volunteers.</li>
                     </ul>
                 </div>
             </div>
