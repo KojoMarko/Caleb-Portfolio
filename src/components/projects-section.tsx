@@ -199,10 +199,10 @@ export default function ProjectsSection() {
             <SectionTitle title="Projects" description="Where Passion Meets Purpose: Crafting Digital Solutions" />
 
             <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
-                <TabsList className="grid w-full grid-cols-1 md:grid-cols-3">
-                    <TabsTrigger value="software">Software Engineering</TabsTrigger>
-                    <TabsTrigger value="biomedical">Biomedical & IoT</TabsTrigger>
-                    <TabsTrigger value="cloud">Cloud Solutions</TabsTrigger>
+                <TabsList className="grid w-full h-auto grid-cols-1 md:grid-cols-3 md:h-10">
+                    <TabsTrigger value="software" className="px-2 py-2 text-sm md:px-3 md:py-1.5">Software Engineering</TabsTrigger>
+                    <TabsTrigger value="biomedical" className="px-2 py-2 text-sm md:px-3 md:py-1.5">Biomedical & IoT</TabsTrigger>
+                    <TabsTrigger value="cloud" className="px-2 py-2 text-sm md:px-3 md:py-1.5">Cloud Solutions</TabsTrigger>
                 </TabsList>
 
                 <div className="my-8">
