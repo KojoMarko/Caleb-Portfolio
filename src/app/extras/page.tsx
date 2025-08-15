@@ -23,6 +23,14 @@ const extras = [
     },
 ]
 
+const videos = [
+    {
+        title: "My Tech Career Journey",
+        description: "A video documenting my journey into tech, the challenges, and the wins. This video provides insights into my transition into the tech industry and the lessons I've learned along the way.",
+        embedUrl: "https://www.youtube.com/embed/rU3MZQ3N17A",
+    }
+]
+
 export default function ExtrasPage() {
     return (
         <>
@@ -51,6 +59,34 @@ export default function ExtrasPage() {
                             <CardContent className="p-6">
                                 <CardTitle>{item.title}</CardTitle>
                                 <p className="mt-2 text-muted-foreground">{item.description}</p>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+
+                <div className="text-center mt-24">
+                    <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">My Videos</h2>
+                    <p className="mt-4 text-lg leading-8 text-muted-foreground">
+                        Check out some of my video content.
+                    </p>
+                </div>
+
+                <div className="mt-16 grid gap-8 md:grid-cols-1 lg:grid-cols-2 max-w-4xl mx-auto">
+                    {videos.map((video) => (
+                        <Card key={video.title} className="overflow-hidden">
+                            <div className="aspect-video">
+                                <iframe
+                                    className="w-full h-full"
+                                    src={video.embedUrl}
+                                    title={video.title}
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <CardContent className="p-6">
+                                <CardTitle>{video.title}</CardTitle>
+                                <p className="mt-2 text-muted-foreground">{video.description}</p>
                             </CardContent>
                         </Card>
                     ))}
