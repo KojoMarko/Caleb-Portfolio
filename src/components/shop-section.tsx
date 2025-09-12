@@ -9,7 +9,7 @@ const devices = [
     {
         name: "Glucometer Kit",
         description: "A complete kit for monitoring blood glucose levels, including a meter, test strips, and lancets.",
-        image: "https://picsum.photos/seed/glucometer/600/400",
+        image: "/assets/Sinocare Glucometer Kit.jpg",
         hint: "medical device",
     },
     {
