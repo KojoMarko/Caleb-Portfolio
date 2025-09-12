@@ -35,6 +35,12 @@ const devices = [
         description: "3DxH 560 AL Hematology Analyzer for clinical laboratory use.",
         image: "/assets/3DxH 560 AL Hematology Analyzer563x480.png",
         hint: "medical device",
+    },
+    {
+        name: "Urit HB Meter",
+        description: "A portable device for measuring hemoglobin levels accurately.",
+        image: "/assets/Urit HB Meter.jpg",
+        hint: "medical device",
     }
 ];
 
@@ -87,7 +93,7 @@ export default function ShopSection() {
 
             <div>
                 <SectionTitle title="Devices" description="Reliable equipment for health monitoring." />
-                <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {devices.map((device) => (
                         <Card key={device.name} className="flex flex-col">
                             <CardHeader className="p-0">
