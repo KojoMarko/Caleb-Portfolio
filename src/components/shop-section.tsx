@@ -25,9 +25,9 @@ const devices = [
         hint: "medical device",
     },
     {
-        name: "Pulse Oximeter",
-        description: "A fingertip pulse oximeter to measure blood oxygen saturation (SpO2) and pulse rate.",
-        image: "https://picsum.photos/seed/oximeter/600/400",
+        name: "Fetal Doppler",
+        description: "A handheld ultrasound transducer used to detect the fetal heartbeat for prenatal care.",
+        image: "/assets/Fetal Doppler.jpg",
         hint: "medical device",
     },
     {
