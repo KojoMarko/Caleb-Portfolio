@@ -63,14 +63,23 @@ const services = [
 export default function ShopSection() {
     return (
         <section id="shop">
-            <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">Shop</h1>
-                <p className="mt-4 text-lg leading-8 text-muted-foreground">
-                    Quality medical devices and expert services to meet your needs.
-                </p>
+            <div className="relative h-64 md:h-80 w-full overflow-hidden rounded-lg mb-16">
+                <Image
+                    src="https://picsum.photos/seed/shop-banner/1200/400"
+                    alt="Shop banner"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="medical equipment shop"
+                />
+                <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-primary-foreground p-4">
+                    <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">Shop</h1>
+                    <p className="mt-4 text-lg leading-8 max-w-2xl">
+                        Quality medical devices and expert services to meet your needs.
+                    </p>
+                </div>
             </div>
 
-            <div className="mt-16">
+            <div>
                 <SectionTitle title="Devices" description="Reliable equipment for health monitoring." />
                 <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     {devices.map((device) => (
