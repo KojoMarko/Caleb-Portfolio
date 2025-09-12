@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import SectionTitle from "./section-title";
+import Link from "next/link";
 
 const devices = [
     {
@@ -89,7 +90,9 @@ export default function ShopSection() {
                                 <CardDescription className="mt-2">{device.description}</CardDescription>
                             </CardContent>
                             <CardFooter className="p-6 pt-0">
-                                <Button className="w-full">View Details</Button>
+                                <Button asChild className="w-full">
+                                    <Link href="/contact">View Details</Link>
+                                </Button>
                             </CardFooter>
                         </Card>
                     ))}
@@ -116,7 +119,9 @@ export default function ShopSection() {
                                 <CardDescription className="mt-2">{service.description}</CardDescription>
                             </CardContent>
                             <CardFooter className="p-6 pt-0">
-                                <Button className="w-full">Get a Quote</Button>
+                                <Button asChild className="w-full">
+                                    <Link href="/contact">Get a Quote</Link>
+                                </Button>
                             </CardFooter>
                         </Card>
                     ))}
