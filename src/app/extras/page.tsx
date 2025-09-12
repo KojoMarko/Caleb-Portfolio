@@ -1,24 +1,49 @@
+
 import Header from "@/components/header";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const extras = [
     {
+        title: "NSS Flyer Design 1",
+        description: "A Photoshop flyer design advertising National Service vacancies for Alos Paraklet Healthcare Limited.",
+        image: "/assets/Lady Flyer NSS Flyer-Recovered.jpg",
+        hint: "flyer design",
+    },
+    {
+        title: "NSS Flyer Design 2",
+        description: "A Photoshop flyer design advertising National Service vacancies for Alos Paraklet Healthcare Limited.",
+        image: "/assets/Lady top NSS Flyer-Recovered.jpg",
+        hint: "flyer design",
+    },
+    {
+        title: "NSS Flyer Design 3",
+        description: "A Photoshop flyer design advertising National Service vacancies for Alos Paraklet Healthcare Limited.",
+        image: "/assets/New NSS Flyer.jpg",
+        hint: "flyer design",
+    },
+    {
+        title: "NSS Flyer Design 4",
+        description: "A Photoshop flyer design advertising National Service vacancies for Alos Paraklet Healthcare Limited.",
+        image: "/assets/Photshop NSS Flyer-Recovered very new.jpg",
+        hint: "flyer design",
+    },
+    {
         title: "Biomedical Device UI Concept",
         description: "A modern user interface for a portable ECG monitor, designed for clarity and ease of use in clinical settings.",
-        image: "https://placehold.co/600x400.png",
+        image: "https://picsum.photos/seed/med-ui/600/400",
         hint: "medical ui",
     },
     {
         title: "Healthcare Dashboard",
         description: "A data visualization concept for tracking patient vitals and hospital resources in real-time.",
-        image: "https://placehold.co/600x400.png",
+        image: "https://picsum.photos/seed/dashboard/600/400",
         hint: "dashboard analytics",
     },
     {
         title: "IoT Sensor Casing Design",
         description: "3D model of a compact and durable casing for a custom-built environmental sensor.",
-        image: "https://placehold.co/600x400.png",
+        image: "https://picsum.photos/seed/3d-model/600/400",
         hint: "3d model",
     },
 ]
