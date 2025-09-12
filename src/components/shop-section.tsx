@@ -15,13 +15,13 @@ const devices = [
     {
         name: "Blood Pressure Monitor",
         description: "An automatic upper arm monitor for accurate blood pressure and pulse rate readings.",
-        image: "https://picsum.photos/seed/bp-monitor/600/400",
+        image: "/assets/Electronic Blood Pressure Monitor.jpg",
         hint: "medical device",
     },
     {
-        name: "Digital Thermometer",
-        description: "Fast and reliable digital thermometer for oral, rectal, or underarm use.",
-        image: "https://picsum.photos/seed/thermometer/600/400",
+        name: "Microscope",
+        description: "Olympus CX-23 microscope for clinical and educational use.",
+        image: "/assets/Microscope Olympus CX-23.jpg",
         hint: "medical device",
     },
     {
